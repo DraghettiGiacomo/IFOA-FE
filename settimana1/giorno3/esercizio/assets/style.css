@@ -61,6 +61,13 @@ h1 {
     margin-bottom: 10px;
 }
 
+#topMain video {
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px lightgray;
+    margin-bottom: 10px;
+}
+
 #topMain h4 {
     color: #999999;
     font-weight: 400;

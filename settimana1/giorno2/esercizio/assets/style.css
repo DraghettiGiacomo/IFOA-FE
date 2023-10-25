@@ -1,0 +1,123 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+}
+
+
+/* ---------------- nav  ----------------*/
+
+header {
+    padding: 15px;
+    background-color: rgb(85, 85, 85);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+header div img {
+    width: 10%;
+}
+
+header div nav {
+    display: flex;
+    justify-content: center;
+}
+
+header div nav ul {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+header div nav ul li a {
+    text-decoration: none;
+    color: rgb(193, 193, 193);
+}
+
+/* ---------------- nav  ----------------*/
+
+
+/* ---------------- main ----------------  */
+
+/* titolo pagina */
+
+#paginaTitle {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+/* titolo pagina */
+
+/* tabella */
+
+.tabella table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.tabella tbody tr td {
+    border: 1px solid black;
+}
+
+.tabella tbody tr:nth-child(2n + 2) {
+    background-color: aqua;
+}
+
+/* tabella */
+
+/* articoli correlati */
+
+.articoliCorrelati {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.articoliCorrelati .articoli {
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.articoliCorrelati .articoli .art1 {
+    padding: 22px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.articoliCorrelati .articoli .art1:hover {
+    border: 1px solid rgb(102, 102, 102);
+    background-color: rgb(210, 208, 208);
+}
+
+/* articoli correlati */
+
+/* ---------------- main ----------------  */
+
+
+/* ---------------- footer  ----------------*/
+
+footer {
+    background-color: rgb(103, 101, 101);
+    padding: 30px;
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .copyright p a{
+    color: whitesmoke;
+}
+
+/* ---------------- footer  ----------------*/
+
+
+

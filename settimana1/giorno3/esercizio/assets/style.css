@@ -1,0 +1,113 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #333333;
+    background-color: rgb(250, 250, 250);
+}
+
+
+/* ------ header ------ */
+
+header {
+    margin-bottom: 5%;
+}
+
+#logo {
+    border-bottom: 1px solid orange;
+    padding: 15px;
+}
+
+#logo img {
+    width: 12%;
+}
+
+#underLogo {
+    color: #107777;
+    background-color: #FDFBF1;
+    padding: 20px;
+}
+
+#underLogo span {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* ------ header ------ */
+
+/* ------ main ------ */
+
+main {
+    margin: 0 29%;
+}
+
+#topMain {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+#topMain div p {
+    margin-bottom: 10px;
+}
+
+#topMain #immagine {
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px lightgray;
+    margin-bottom: 10px;
+}
+
+#topMain h4 {
+    color: #999999;
+    font-weight: 400;
+}
+
+.collegamenti {
+    text-align: start;
+    border-left: 1px solid #FFD877;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.collegamenti h3 {
+    color: #B5460F;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.collegamenti a {
+    text-transform: capitalize;
+    color: #107777;
+}
+
+#ingredientsMethod {
+    text-align: left;
+}
+
+#ingredientsMethod .title {
+    font-size: large;
+    border-bottom: 1px solid #C4F3F2;
+    margin-bottom: 20px;
+}
+
+#ingredientsMethod .title h2  {
+    font-weight: normal;
+}
+
+#ingredientsMethod .ingredients div .subtitles{
+    font-weight: bolder;
+}
+
+.method .elements ol li:first-of-type {
+    margin-bottom: 10px;
+}
+
+.method .elements ol li:last-of-type {
+    list-style-type: none;
+}
+
+/* ------ main ------ */

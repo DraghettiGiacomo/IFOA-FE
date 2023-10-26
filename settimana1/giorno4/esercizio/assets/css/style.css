@@ -1,0 +1,196 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    background-image: url(/settimana1/giorno4/esercizio/assets/img/sfondo.png);
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+}
+
+/* -------------- HEADER -------------- */
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgb(3, 109, 134);
+    background: linear-gradient(0deg, rgba(3, 109, 134, 1) 0%, rgba(0, 158, 195, 1) 100%);
+    box-shadow: 1px 1px 10px black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#logo {
+    width: 12%;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+}
+
+header nav ul li::before {
+    content: '⭐ ';
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* -------------- HEADER -------------- */
+
+/* -------------- MAIN -------------- */
+
+#containerMain {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 1px 10px black;
+    margin-bottom: 25px;
+}
+
+/*  ELEMENTI NEL MAIN - ARTICLE  */
+
+h1 {
+    margin: 0 0 20px 0;
+}
+
+#autoreData {
+    opacity: 0.5;
+}
+
+#autoreData div,
+#autoreData div p {
+    display: inline;
+}
+
+#viola {
+    color: #A22973;
+    font-weight: 600;
+}
+
+main ul span {
+    border-radius: 5px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+/*  TABELLE  */
+
+#table table {
+    border-collapse: collapse;
+    border-bottom: 2px solid #3F6BCA;
+}
+
+#table table tbody tr:nth-child(1) {
+    background-color: #3F6BCA;
+    color: white;
+}
+
+#table table tbody tr:nth-child(2n + 2) {
+    background-color:  #F3F3F3;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+#table table tbody tr td {
+    padding: 10px;
+}
+
+/*  TABELLE  */
+
+/*  VIDEO  */
+
+#video {
+    margin-bottom: 20px;
+}
+
+#video iframe {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*  VIDEO  */
+
+/*  FORM  */
+
+#containerNews {
+    background-color: #E3E3E3;
+    padding: 10px;
+}
+
+#containerNews h3 {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#containerNews #containerForm #form input {
+    border: 0;
+    border-bottom: 1px dotted black;
+    padding: 5px;
+}
+
+#containerNews #containerForm #form button {
+    background-color: #3F6BCA;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+/*  FORM  */
+
+/* -------------- ELEMENTI NELL' ASIDE -------------- */
+
+aside h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+aside #Articolo {
+    background-color: #E3E3E3;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #C5C5C5;
+}
+
+aside #Articolo div p, 
+aside #Articolo span p {
+    display: inline;
+}
+
+aside #Articolo #data {
+    text-align: end;
+}
+
+aside #Articolo:last-of-type {
+    margin-bottom: 0px;
+}
+
+/* -------------- ELEMENTI NELL' ASIDE -------------- */
+
+/* -------------- FOOTER -------------- */
+
+ footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: rgb(5,85,103);
+    background: linear-gradient(180deg, rgba(5,85,103,1) 0%, rgba(53,53,53,1) 100%);
+    box-shadow: 1px 1px 10px black;
+ }
+
+ footer p:first-of-type {
+    text-transform: capitalize;
+ }
+ footer p:last-of-type {
+    text-transform: initial
+ }
+
+ footer p a {
+    color: #FA01FB;
+ }
+
+/* -------------- FOOTER -------------- */

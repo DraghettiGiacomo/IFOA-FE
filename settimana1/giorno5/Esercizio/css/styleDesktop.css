@@ -140,11 +140,11 @@ main #containerCard {
 
 #containerCard .card .text {
     padding: 0 20px;
-    font-size: small;
+    font-size: medium;
 }
 
 #containerCard .card .text p {
-    font-size: small;
+    font-size: medium;
 }
 
 #containerCard .card img {

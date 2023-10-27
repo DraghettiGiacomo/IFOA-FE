@@ -1,0 +1,160 @@
+/* Your styles here */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*  {
+    text-align: center;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ------ header ------ */
+
+header {
+    background-color: black;
+    padding: 20px;
+}
+
+header img {
+    width: 35%;
+}
+
+/* ------ header ------ */
+
+
+/* ------ main ------ */
+
+/* hero */
+
+main #hero {
+    background-image: url(../images/banner.jpg);
+    background-size: contain;
+    padding: 20px 20px;
+}
+
+#hero button {
+    background-color: #f04c2f;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+#hero button a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* hero */
+
+/* imgTonda */
+
+#imgTonda {
+    padding: 20px 20px;
+}
+
+#imgTonda img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+/* imgTonda */
+
+/* citazioneRed */
+
+#citazioneRed {
+    background-color: #e22d0e;
+    color: white;
+    padding: 20px 20px;
+}
+
+#citazioneRed h2 {
+    color: white;
+}
+
+#citazioneRed blockquote span {
+    font-size: small;
+}
+
+/* citazioneRed */
+
+/* cards */
+
+main #containerCard {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+#containerCard .card {
+    width: 100%;
+    border: 1px solid #dee1e3;
+    margin-bottom: 30px;
+}
+
+#containerCard .card .text {
+    padding: 0 20px;
+}
+
+#containerCard .card img {
+   width: 100%;
+}
+
+/* cards */
+
+
+/* ------ main ------ */
+
+
+/* ------ footer ------ */
+
+footer {
+    background-color: #25a2c3;
+    padding: 30px 20%;
+}
+
+footer,
+footer div a {
+    color: #c8e7f0;
+}
+
+footer h3 {
+    margin: 0;
+    color: white;
+}
+
+footer #link {
+    padding: 20px 0;
+    border-bottom: 1px solid #E2F1EE;
+}
+
+footer div .inLinea a, 
+footer div .inLinea p {
+    display: inline;
+}
+
+footer #copyright p span {
+    text-decoration: underline;
+}
+
+/* ------ footer ------ */

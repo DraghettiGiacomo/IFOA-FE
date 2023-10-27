@@ -1,1 +1,204 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+ body {
+    padding: 0;
+    margin: 0;
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     color: #25a2c3;
+     font-family: 'Montserrat', sans-serif;
+     line-height: 1.5;
+ }
+
+
+/* ------ header ------ */
+
+header {
+    background-color: black;
+    padding: 20px 40px;
+}
+
+header img {
+    width: 10%;
+}
+
+/* ------ header ------ */
+
+/* ------ main ------ */
+
+/* banner */
+
+main #banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    padding: 10em 0;
+}
+
+main #banner div {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+main #banner div h1 {
+    margin: 0;
+}
+
+main #banner div button {
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+main #banner div button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* banner */
+
+/* imgTonda */
+
+#imgTonda {
+    padding: 10% 0;
+}
+
+#imgTonda>div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#imgTonda>div img {
+    border-radius: 50%;
+    margin-right: 2.5%;
+}
+
+#frasi {
+    display: inline-block;
+    text-align: start;
+    width: 35%;
+    margin-left: 2.5%;
+}
+
+#frasi h3, p {
+    font-size: large;
+}
+
+/* imgTonda */
+
+/* citazioneRed */
+
+#citazioneRed {
+    background-color: #e22d0e;
+    color: white;
+    padding: 6% 6%;
+    text-align: center;
+}
+
+#citazioneRed h2 {
+    color: white;
+}
+
+#citazioneRed blockquote span {
+    font-size: small;
+}
+
+/* citazioneRed */
+
+/* cards */
+
+main #containerCard {
+    text-align: center;
+    padding: 5em 0;
+}
+
+#containerCard .card {
+    width: 300px;
+    border: 1px solid #dee1e3;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#containerCard .card:nth-child(2) {
+    margin: 0 40px;
+}
+
+#containerCard .card .text {
+    padding: 0 20px;
+    font-size: small;
+}
+
+#containerCard .card .text p {
+    font-size: small;
+}
+
+#containerCard .card img {
+   width: 100%;
+   min-height: 200px;
+}
+
+/* cards */
+
+/* ------ main ------ */
+
+/* ------ footer ------ */
+
+footer {
+    background-color: #25a2c3;
+    padding: 30px 20%;
+    text-align: center;
+}
+
+footer,
+footer div a {
+    color: #c8e7f0;
+}
+
+footer h3 {
+    margin: 0;
+    color: white;
+    font-size: 2em;
+}
+
+footer #link {
+    margin: 0 auto;
+    text-align: start;
+    width: fit-content;
+    padding: 20px 0;
+    border-bottom: 1px solid #E2F1EE;
+}
+
+footer div .inLinea i {
+    color: white;
+}
+
+footer div .inLinea a, 
+footer div .inLinea p {
+    display: inline;
+    font-size: small;
+}
+
+footer #copyright p {
+    font-size: small;
+}
+
+footer #copyright p span {
+    text-decoration: underline;
+}
+
+/* ------ footer ------ */

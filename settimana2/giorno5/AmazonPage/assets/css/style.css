@@ -1,0 +1,191 @@
+/* Your styles here */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #E9EDEE;
+}
+
+/* ---------- header ---------- */
+
+#logo {
+    background-color: #222F3F;
+    padding: 5px 30px;
+}
+
+#logo img {
+    width: 8%;
+}
+
+#nav, #BackToTop {
+    background-color: #364759;
+    padding: 15px 30px;
+}
+
+#nav ul li {
+    color: white;
+    list-style-type: none;
+    display: inline;
+    margin-right: 20px;
+}
+
+/* ---------- header ---------- */
+
+/* ---------- main ---------- */
+
+main {
+    margin: 30px 0;
+    padding: 0 30px;
+}
+
+#orange {
+    background-color: #F56600;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    padding: 7px 0;
+}
+
+#HolidayGift {
+    margin: 30px 0;
+    text-align: center;
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/bg-image.png);
+    background-size: cover;
+    padding: 50px 0;
+    color: white;
+}
+
+#HolidayGift h2 {
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+#HolidayGift p {
+    font-weight: bold;
+}
+
+#findGift {
+    margin: 30px 0;
+    background-color: white;
+    padding: 25px;
+}
+
+#titoletto h3,
+#titoletto p {
+    display: inline-block;
+}
+
+#titoletto {
+    margin-bottom: 20px;
+}
+
+#titoletto h3 {
+    font-weight: 600;
+}
+
+#titoletto p {
+    color: #236D7D;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+/* cards */
+
+/* #findGift #containerCard {
+    text-align: center;
+    height: auto
+}
+
+#findGift #containerCard .card {
+    width: 300px;
+    margin: 0 auto;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#findGift #containerCard .card img {
+    border-radius: 20px;
+    width: 100%;
+    min-height: 300px;
+    box-shadow: 10px 10px 10px #E5E7E8;
+} */
+
+#findGift #containerCard .card {
+    display: inline-block;
+    width: 20em;
+    height: 25em;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow:  20px 20px 20px #E5E7E8;
+    
+}
+
+#findGift #containerCard div:first-of-type  {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_1.jpg);
+}
+
+#findGift #containerCard div:nth-child(2)  {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_2.jpg);
+}
+
+#findGift #containerCard div:nth-child(3)  {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_3.jpg);
+}
+
+#findGift #containerCard div:nth-child(4)  {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_4.jpg);
+}
+
+
+/* cards */
+
+#twoBanner {
+    width: 100wv;
+}
+
+#twoBanner #banner {
+    background-size:cover;
+    width: 100wv;
+    height: 65vh
+}
+
+#twoBanner #titoletto {
+    text-align: center;
+   }
+
+#twoBanner div:first-of-type #banner {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_9.png);
+}
+
+#twoBanner div:last-of-type #banner {
+    background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_10.png);
+}
+
+#twoBanner div:last-of-type #titoletto p {
+    text-transform: capitalize;
+}
+
+/* ---------- main ---------- */
+
+/* ---------- footer ---------- */
+
+footer {
+    text-align: center;
+}
+
+footer #BackToTop a {
+    color: white;
+    font-weight: bold;
+}
+
+footer #logo img {
+    margin: 60px 0;
+    width: 13%;
+}
+
+/* ---------- footer ---------- */

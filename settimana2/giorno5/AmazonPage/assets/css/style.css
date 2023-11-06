@@ -122,7 +122,7 @@ main {
     background-size: cover;
     border-radius: 20px;
     box-shadow:  20px 20px 20px #E5E7E8;
-    
+    margin-right: 35px;
 }
 
 #findGift #containerCard div:first-of-type  {
@@ -137,8 +137,9 @@ main {
     background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_3.jpg);
 }
 
-#findGift #containerCard div:nth-child(4)  {
+#findGift #containerCard div:last-of-type  {
     background-image: url(/settimana2/giorno5/AmazonPage/assets/images/img_4.jpg);
+    margin-right: 0;
 }
 
 

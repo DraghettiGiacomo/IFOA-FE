@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorno 4 - Live Coding - Calendario</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <main>     
+            <h1></h1>       
+            <div id="calendar"></div>
+            <h2>Aggiungi appuntamento</h2>
+            <div id="addMeeting">
+                <div>
+                    <h4>Giorno</h4>
+                    <span id="newMeetingDay">Clicca su un giorno</span>
+                </div>
+                <form>
+                    <div>
+                        <h4>Ora appuntamento</h4>
+                        <input type="time" required id="newMeetingTime">
+                    </div>
+                    <div>
+                        <h4>Nome appuntamento</h4>
+                        <input type="text" required id="newMeetingName"
+                            placeholder="Nome appuntamento">
+                    </div>
+                    <div>
+                        <h4>Aggiungi</h4>
+                        <button type="submit">Salva</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <section>
+            <div id="appointments">
+                <h2>Appuntamenti del giorno:</h2>
+                <ul></ul>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

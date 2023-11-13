@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let day = 'saturday';
 let giorno;
 
@@ -87,7 +86,6 @@ for (let i = 0 ; i < numeri.length; i++){
 document.getElementById('somma').innerHTML += somma;
 
 
-=======
 let day = 'saturday';
 let giorno;
 
@@ -176,4 +174,3 @@ for (let i = 0 ; i < numeri.length; i++){
 document.getElementById('somma').innerHTML += somma;
 
 
->>>>>>> bbc085b90199f02e42861909e83893eef74a13ba

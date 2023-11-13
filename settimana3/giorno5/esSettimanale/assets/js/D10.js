@@ -262,6 +262,11 @@ console.log(deleteOne('io sono Massimo Decimo Meridio', true));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+console.log('***es6***');
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+console.log(emailRegex);
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -554,16 +559,17 @@ console.log(addClassTest());
 
 */
 
-/* console.log('***es27***');
+console.log('***es27***');
 
+let asterisco = '*'
 function halfTree(number){
-  let asterisco = '*'
+  
   for(let i = 0; i < number; i++){
-    asterisco += asterisco
+    console.log(asterisco += asterisco);
   }
-  return console.log(asterisco); 
+  return 
 }
-halfTree(3); */
+halfTree(4);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.

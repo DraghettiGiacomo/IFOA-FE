@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //---->> le aplpicazioni vanno scomposte / particellizate
 
@@ -76,7 +75,6 @@ function cancellaForm(){
 
 
 
-=======
 
 //---->> le aplpicazioni vanno scomposte / particellizate
 
@@ -152,4 +150,3 @@ function cancellaForm(){}
 
 
 
->>>>>>> bbc085b90199f02e42861909e83893eef74a13ba

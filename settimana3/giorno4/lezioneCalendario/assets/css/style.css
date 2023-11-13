@@ -101,11 +101,11 @@ input::placeholder {
 }
 
 #newMeetingDay .hasDay {
-    font-size: 28px;
-    background-color: #0c0a1e;
-    border-radius: 10px;
-    color: #ebebeb;
-    padding: 0 5px;
+    font-size: 28px!important;
+    background-color: #0c0a1e!important;
+    border-radius: 10px!important;
+    color: #ebebeb!important;
+    padding: 0 5px!important;
 }
 
 #newMeetingTime::-webkit-calendar-picker-indicator {

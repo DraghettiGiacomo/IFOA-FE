@@ -28,7 +28,7 @@ const scriviMese = function () {
     const indiceMese = now.getMonth(); // recupera il mese dalla data che abbiamo salvato sopra
     const nomeMese = monthNames[indiceMese]; // confronta l'indice del mese corrente con l'indice del nostro array 'monthNames'
     title.innerText = nomeMese;
-}
+};
 scriviMese();
 
 // calcoliamo quanti giorni ci sono nel mese corrente per creare le celle dei giorni
@@ -40,23 +40,8 @@ const giorniTot = function () {
     let ultimoGiorno = new Date(anno, mese + 1, 0); // facciamo creare un giorno preciso a js ma per avere l'ultimo giorno del mese corrente dobbiamo ingannare js perciò scriviamo di cercare il giorno 0 del mese sucessivo e siccome non esiste va all'ultimo giorno del mese precedente 
     const numeroGiorni = ultimoGiorno.getDate();
     return numeroGiorni;
-}
+};
 giorniTot()
-
-const deselezionaCelle = function () {
-    const celle = document.querySelectorAll('.day');
-    celle.forEach((element) => {
-        element.classList.remove('selected')
-    })
-}
-
-// quando si clicca su un griono compare la data selezionata nell'id 'newMeetingDay'
-
-const giornoAppuntamento = function (indiceGiorno) {
-    const giorno = document.getElementById('newMeetingDay')
-    giorno.classList.add('hasDay');
-    giorno.innerText = indiceGiorno + 1;
-}
 
 // adesso va creata la griglia con i div che contengono i numeri dei giorni totali del mese corrente
 
@@ -66,6 +51,14 @@ const creaGriglia = function (numeroGiorni) {
     for (let i = 0; i < numeroGiorni; i++) {
         const cellaGiorno = document.createElement('div');
         cellaGiorno.classList.add('day')
+
+        const valoreCella = document.createElement('h3');
+        valoreCella.innerText = i + 1;
+        // appendo gli elementi creati
+        cellaGiorno.appendChild(valoreCella);
+        calendarDiv.appendChild(cellaGiorno);
+        appointments.push([]);
+
         cellaGiorno.addEventListener('click', function (e) {
             deselezionaCelle();
             cellaGiorno.classList.add('selected')
@@ -78,15 +71,24 @@ const creaGriglia = function (numeroGiorni) {
                 divAppuntamenti.style.display = 'none';
             }
         });
-        const valoreCella = document.createElement('h3');
-        valoreCella.innerText = i + 1;
-        // appendo gli elementi creati
-        cellaGiorno.appendChild(valoreCella);
-        calendarDiv.appendChild(cellaGiorno);
-
-        appointments.push([]);
+        
     }
 }
+
+const deselezionaCelle = function () {
+    const celle = document.querySelectorAll('.day');
+    celle.forEach((element) => {
+        element.classList.remove('selected')
+    })
+};
+
+// quando si clicca su un griono compare la data selezionata nell'id 'newMeetingDay'
+
+const giornoAppuntamento = function (indiceGiorno) {
+    const giorno = document.getElementById('newMeetingDay')
+    giorno.classList.add('hasDay');
+    giorno.innerText = indiceGiorno + 1;
+};
 
 
 creaGriglia(giorniTot());

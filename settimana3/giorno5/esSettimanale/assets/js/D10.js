@@ -267,6 +267,20 @@ console.log('***es6***');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 console.log(emailRegex);
 
+//function isThisAnEmail(email){
+  //return email.indexOf('@') > 0 && email.indexOf('.') > 0 //--->> molto meno preciso, maglio usare le regex
+  /* if (email.indexOf('@') > 0){
+    if(email.indexOf('.') > 0){
+      let chiocciola = email.indexOf('@');
+      if (email.indexOf('@') > chiocciola + 2){
+        return 'valida'
+      }
+    }
+  }
+  return 'non valida' */
+//}
+//console.log(isThisAnEmail('pippo@gmail.com')); 
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */

@@ -213,6 +213,7 @@ h1+p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 
 ul,

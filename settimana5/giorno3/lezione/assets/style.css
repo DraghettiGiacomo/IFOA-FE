@@ -1,0 +1,61 @@
+.container, .container2, .container3, .container4, .container5 {
+    width: 80vw;
+    margin: 0 auto;
+    gap: 10px; /* assegna una distanza ai figli di un contenitore. VA DATO AL CONTENITORE PADRE */
+    background-color: aqua;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container5 {
+    width: 100%;
+    height: 100vh;
+}
+
+.children, .children1, .children2, .children3, .children4, .children5, .children6, .children7, .children8, .children9, .children10, .children11, .children12{
+    border: 1px solid black;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.children p {
+    padding: 20px;
+}
+
+/* ----------------- */
+
+.children1, .children3, .children4 {
+    flex-grow: 1;
+}
+.children2 {
+    flex-grow: 9;
+}
+
+/* ----------------- */
+
+.children5, .children6{
+    flex-basis: 45%;
+}
+
+/* ----------------- */
+
+.children7, .children8, .children9{
+    flex-shrink: 120px; /* è il contrario di flex-grow */
+}
+
+/* ----------------- */
+
+.children11 {
+    align-items: bottom;
+}
+
+
+
+
+
+
+

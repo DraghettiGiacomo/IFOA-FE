@@ -15,13 +15,14 @@ window.addEventListener('scroll', function() {
 
 /* ------------------------------- MMM ------------------------------- */
 
+
+/* creare un array dome inserisco le 'g' con opacità = 0/1, dopodichè genero dei numeri casuali li passo come indice dell'array e a qull'indice cambio l'opacità per qualche secondo*/
+
 window.addEventListener('load', function() {
-    /* const mmm = document.querySelectorAll('#MMM g').style.setAttribute("display", "block")
-    console.log(mmm); */
+    const mmm = document.querySelectorAll('#MMM g')
+    console.log(mmm);
 
-    document.querySelectorAll('#MMM g').style.getAttribute("opacity", "0")
-
-    /* var makeArray = function( list ) {
+    var makeArray = function( list ) {
         if( !list instanceof NodeList ) {
             return;
         }
@@ -35,13 +36,20 @@ window.addEventListener('load', function() {
         return arr;
     };
     var elemArr = makeArray( mmm );
-    var revArr = elemArr.reverse();
+    /* var revArr = elemArr.reverse(); */
 
-    console.log(revArr[0]);
-    const maremma = function  (arr){
-        arr[0].style.setAttribute("display", "block")
+    console.log(elemArr);
+
+    const realArr = []
+    
+    for(let i = 0; i < elemArr.length; i++){
+        if(elemArr[i].hasAttribute('opacity') === true){
+            realArr.push(realArr[i])
+        }
     }
-    console.log(maremma(revArr)); */
+
+    console.log(realArr);
+
 });
 
 

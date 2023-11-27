@@ -1,0 +1,90 @@
+.container {
+    width: 300px;
+    background-color: blueviolet;
+}
+
+
+@media screen and (min-width: 601px) {
+    .container {
+        background-color: blue;
+    }
+
+    #paragraph {
+        color: red;
+    }
+}
+
+/* ******************************** ORIENTATION FA CAMBIARE LAYOUT QUANDO SI GIRA LO SCHERMO ******************************** */
+
+@media screen and (orientation: landscape) and (min-width: 601px) {
+    .container {
+        background-color: yellow;
+    }
+
+    #paragraph {
+        color: green;
+    }
+}
+
+
+@media screen and (min-width: 1201px) {
+    .container {
+        background-color: green;
+    }
+
+    #paragraph {
+        color: blue;
+    }
+}
+
+/* ******************************** CON PRINT DECIDO CHE LAYOUT AVERE QUANDO SI STAMPA LA PAGINA ******************************** */
+
+@media print {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* ******************************** MEDIA QUERY AVANZATO ******************************** */
+
+/* ****************** HOVER ****************** */
+
+@media screen and (hover:hover) {
+    div {
+        background-color: red;
+    }
+}
+
+@media screen and (hover:none) {}
+
+/* ****************** POINTER ****************** */
+/* none/coarse/fine */
+
+
+@media screen and (pointer: coarse) {
+    /* rileva dispositivi con puntatore tipo smart tv/ gaming console */
+}
+
+@media screen and (pointer:none) {
+    /* rileva dispositivi seza puntatore */
+}
+
+@media screen and (pointer:fine) {
+    /* rileva dispositivi di precisione tipo mouse e pen drive tablet */
+}
+
+/* ****************** AND - OR - NOT ****************** */
+
+@media screen and (max-width:320px),
+(orientation: landscape) {
+    body {
+        background-color: bisque;
+    }
+}
+
+@media not screen {
+    body {
+        background-color: white;
+    }
+}

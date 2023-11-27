@@ -1,0 +1,24 @@
+body{
+    padding: 90px;
+}
+
+.button {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: 350px;
+    padding: 20px;
+}
+
+.button:hover {
+    transform-origin: 0 0;
+    /* transform: rotate(20deg); */
+    transform: scale(1.2);
+    transition-duration: 2.2s;
+}
+
+
+
+
+
+
+

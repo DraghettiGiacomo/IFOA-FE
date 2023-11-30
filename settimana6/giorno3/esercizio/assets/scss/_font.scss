@@ -1,0 +1,10 @@
+
+
+$textSmall: 14px;
+$textMedium: 20px;
+$textBig: 26px;
+
+@mixin title-big {
+    color: $textColor;
+    font-size: $textBig*2;
+}

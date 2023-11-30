@@ -1,0 +1,10 @@
+
+
+@mixin title-big {
+    color: $textColor;
+    font-size: $textBig*2;
+}
+
+h1{
+   @include title-big();
+}

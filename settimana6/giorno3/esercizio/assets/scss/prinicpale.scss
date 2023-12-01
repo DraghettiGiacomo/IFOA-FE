@@ -29,3 +29,28 @@ main {
     }
 }
 
+.showcase{
+    background-color: map-get($setColors, bgHero );
+    min-height: 600px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+        li {
+            padding: 15px;
+        }
+        a {
+            color: map-get($setColors, textColorLight );
+            &:hover {
+                color: map-get($setColors, secondary );
+            }
+        }
+
+    }
+}
+

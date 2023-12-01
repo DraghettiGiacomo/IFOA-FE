@@ -31,9 +31,183 @@ $btnTertiary: #4caf50;
 
 $bgHero: #640fc5;
 $bgColor: #f4f4f4; */
+/* 
+$padding: 11px 22px 11px 22px;
+
+$margin: 22% 11%;
+ */
+.padding--sm {
+  padding: 12px;
+}
+
+.padding--normal {
+  padding: 16px;
+}
+
+.padding--md {
+  padding: 24px;
+}
+
+.padding--lg {
+  padding: 36px;
+}
+
+.padding--xl {
+  padding: 48px;
+}
+
+.padding--xxl {
+  padding: 160px;
+}
+
+.padding-top-sm {
+  padding-top: 12px;
+}
+
+.padding-top-normal {
+  padding-top: 16px;
+}
+
+.padding-top-md {
+  padding-top: 24px;
+}
+
+.padding-top-lg {
+  padding-top: 36px;
+}
+
+.padding-top-xl {
+  padding-top: 48px;
+}
+
+.padding-top-xxl {
+  padding-top: 160px;
+}
+
+.padding-bottom-sm {
+  padding-bottom: 12px;
+}
+
+.padding-bottom-normal {
+  padding-bottom: 16px;
+}
+
+.padding-bottom-md {
+  padding-bottom: 24px;
+}
+
+.padding-bottom-lg {
+  padding-bottom: 36px;
+}
+
+.padding-bottom-xl {
+  padding-bottom: 48px;
+}
+
+.padding-bottom-xxl {
+  padding-bottom: 160px;
+}
+
+.padding-left-sm {
+  padding-left: 12px;
+}
+
+.padding-left-normal {
+  padding-left: 16px;
+}
+
+.padding-left-md {
+  padding-left: 24px;
+}
+
+.padding-left-lg {
+  padding-left: 36px;
+}
+
+.padding-left-xl {
+  padding-left: 48px;
+}
+
+.padding-left-xxl {
+  padding-left: 160px;
+}
+
+.padding-right-sm {
+  padding-right: 12px;
+}
+
+.padding-right-normal {
+  padding-right: 16px;
+}
+
+.padding-right-md {
+  padding-right: 24px;
+}
+
+.padding-right-lg {
+  padding-right: 36px;
+}
+
+.padding-right-xl {
+  padding-right: 48px;
+}
+
+.padding-right-xxl {
+  padding-right: 160px;
+}
+
+.padding-inline-sm {
+  padding-inline: 12px;
+}
+
+.padding-inline-normal {
+  padding-inline: 16px;
+}
+
+.padding-inline-md {
+  padding-inline: 24px;
+}
+
+.padding-inline-lg {
+  padding-inline: 36px;
+}
+
+.padding-inline-xl {
+  padding-inline: 48px;
+}
+
+.padding-inline-xxl {
+  padding-inline: 160px;
+}
+
+.padding-block-sm {
+  padding-block: 12px;
+}
+
+.padding-block-normal {
+  padding-block: 16px;
+}
+
+.padding-block-md {
+  padding-block: 24px;
+}
+
+.padding-block-lg {
+  padding-block: 36px;
+}
+
+.padding-block-xl {
+  padding-block: 48px;
+}
+
+.padding-block-xxl {
+  padding-block: 160px;
+}
+
 .btn {
   display: inline-block;
   border-radius: 5px;
+  padding: 20px;
   margin: 3px;
   transition: transform 0.3s ease-in-out;
 }

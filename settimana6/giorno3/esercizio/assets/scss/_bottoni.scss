@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    //padding: ;
+    margin: 3px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+$btn-color: ( 
+    primary: map-get($setColors, btnPrimary),
+    secondary: map-get($setColors, btnSecondary),
+    tertiary: map-get($setColors, btnTertiary),
+);
+
+@each $key, $value in $btn-color {
+    .btn-#{$key}{
+        background-color: $value;
+        color: map-get($setColors, textColorLight);
+    }
+}
+

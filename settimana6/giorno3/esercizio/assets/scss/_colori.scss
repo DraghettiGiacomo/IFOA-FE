@@ -1,5 +1,5 @@
-
-$textColor: #f4f4f4;
+/* $textColorDark: black;
+$textColorLight: #f4f4f4;
 
 $bottoni: #0e6cff, #ff8700, #4caf50;
 $btnPrimary: #0e6cff;
@@ -7,4 +7,16 @@ $btnSecondary: #ff8700;
 $btnTertiary: #4caf50;
 
 $bgHero: #640fc5;
+$bgColor: #f4f4f4; */
 
+$setColors: (
+    textColorDark: black,
+    textColorLight: #f4f4f4,
+
+    btnPrimary: #0e6cff,
+    btnSecondary: #ff8700,
+    btnTertiary: #4caf50,
+
+    bgHero: #640fc5,
+    bgColor: #f4f4f4,
+)

@@ -65,6 +65,25 @@ main {
             @include title-big;
             @include animate(1s, 10px, 0, 300ms); 
         }
+
+        p {
+            @include animate(1s, 10px, 0, 300ms);
+            color: lighten(map-get($setColors, bgHero), 40);
+            font-size: $font-size-md;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            padding-inline-end: 3rem;
+        }
+
+        button:first-of-type {
+            @include animate(1s, 10px, 0, 900ms)
+        }
+        button:nth-of-type(2) {
+            @include animate(1s, 10px, 0, 1200ms)
+        }
+        button:last-of-type {
+            @include animate(1s, 10px, 0, 1500ms)
+        }
     }
 }
 

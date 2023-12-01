@@ -2,7 +2,16 @@
 $baseFont: 'Arial', 'Helvetica', sans-serif;
 $secondaryFont: 'Comic Sans MS', cursive, sans-serif;
 
-$textSmall: 14px;
-$textMedium: 20px;
-$textBig: 26px;
+$font-size-sm: 12px;
+$font-size-md: 16px;
+$font-size-lg: 24px;
+$font-size-xl: 48px;
+$font-size-xxl: 96px;
 
+@mixin title-big {
+    font-size: $font-size-xxl;
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 1rem;
+    color: darken($bgHero, 25); //----->> è una proprietà sass e serve per scurire un colore che gli passiamo come variabile. Si può anche schiarire un colore, oppure si può modificare un colore con 'adjust' passandogli tre parametri
+}

@@ -34,23 +34,22 @@ main {
     min-height: 600px;
 
     nav {
-        display: flex;
-        align-items: center;
+        @include flex-center;
         justify-content: space-between;
         ul {
             display: flex;
-            list-style-type: none;
+            list-style: none;
         }
         li {
             padding: 15px;
         }
         a {
-            color: map-get($setColors, textColorLight );
-            &:hover {
-                color: map-get($setColors, secondary );
-            }
+            color: map-get($setColors, textColorLight);
         }
-
+        a:hover {
+            color: map-get($setColors, btnSecondary);
+        }
+        
     }
 }
 

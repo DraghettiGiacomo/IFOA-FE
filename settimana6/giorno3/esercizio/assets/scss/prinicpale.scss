@@ -49,7 +49,20 @@ main {
         a:hover {
             color: map-get($setColors, btnSecondary);
         }
-        
+    }
+
+    &-content {
+        @include flex-center;
+        margin-top: 30px;
+
+        img{
+            @include floating(16px, 0 16px 36px rgb(0 0 0 /0.3), 2px solid lighten(map-get($setColors, bgHero), 30));
+        }
+
+        h1{
+            @include title-big;
+            @include animate(1s, 10px, 0, 300ms); 
+        }
     }
 }
 

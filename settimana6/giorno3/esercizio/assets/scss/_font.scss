@@ -13,5 +13,6 @@ $font-size-xxl: 96px;
     font-weight: 900;
     line-height: 0.95;
     margin-bottom: 1rem;
-    color: darken(map-get($setColors, $bgHero)25); //----->> è una proprietà sass e serve per scurire un colore che gli passiamo come variabile. Si può anche schiarire un colore, oppure si può modificare un colore con 'adjust' passandogli tre parametri
+    color: darken(map-get($setColors, bgHero), 25); 
 }
+//----->> darken è una proprietà sass e serve per scurire un colore che gli passiamo come variabile. Si può anche schiarire un colore, oppure si può modificare un colore con 'adjust' passandogli tre parametri

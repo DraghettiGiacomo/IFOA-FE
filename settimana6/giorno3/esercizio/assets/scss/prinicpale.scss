@@ -2,6 +2,30 @@
 @import 'colori';
 @import 'font';
 @import 'spaziature';
-@import 'bottoni';
-@import 'mixins';
 @import 'animazioni';
+@import 'bottoni';
+@import 'position';
+@import 'mixins';
+
+
+body {
+    background-color: map-get($setColors, bgColor );
+    font-family: $baseFont;
+    line-height: 1.6;
+}
+
+main {
+    position: relative;
+    
+    .line-4{
+        @include grid(4);
+        div {
+            padding-inline: 0.5rem;
+            img{
+                width: 100%;
+                @include floating;
+            }
+        }
+    }
+}
+

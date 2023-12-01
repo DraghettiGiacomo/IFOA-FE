@@ -28,7 +28,6 @@ $sizes:(
     }
 }
 
-
 @include create-padding(); //----->> siccome il mixin sopra crea delle classi, non posso richiamarlo dentro una classe. Perciò si richiama il mixin in questa maniera
 @include create-padding(top); //---->> così passo il parametro della direzione al mixin che lo inserirà nella direzione del padding
 @include create-padding(bottom);
@@ -38,3 +37,22 @@ $sizes:(
 @include create-padding(block);
 
 
+@mixin create-margin($direction: null){
+    @each $key, $value in $sizes{
+        .margin-#{$direction}-#{$key} {
+            @if $direction {
+                margin-#{$direction}: $value; 
+            } @else {
+                margin: $value;
+            }
+        }
+    }
+}
+
+@include create-margin(); 
+@include create-margin(top);
+@include create-margin(bottom);
+@include create-margin(left);
+@include create-margin(right);
+@include create-margin(inline);
+@include create-margin(block);

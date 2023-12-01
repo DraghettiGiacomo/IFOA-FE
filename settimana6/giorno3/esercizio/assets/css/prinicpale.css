@@ -495,6 +495,21 @@ main .line-4 div img {
   border-radius: 16px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
   border: 2px solid #b278f5;
+  width: 50%;
+  animation-name: animate-from-top-uhzqm0c;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 500ms;
+}
+@keyframes animate-from-top-uhzqm0c {
+  from {
+    opacity: 0;
+    translate: 0 -50%;
+  }
+  to {
+    opacity: 1;
+    translate: 0 20%;
+  }
 }
 .showcase-content h1 {
   font-size: 96px;
@@ -502,12 +517,12 @@ main .line-4 div img {
   line-height: 0.95;
   margin-bottom: 1rem;
   color: #28064f;
-  animation-name: animate-from-top-uhzqlzq;
+  animation-name: animate-from-top-uhzqm0p;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 300ms;
 }
-@keyframes animate-from-top-uhzqlzq {
+@keyframes animate-from-top-uhzqm0p {
   from {
     opacity: 0;
     translate: 0 10px;

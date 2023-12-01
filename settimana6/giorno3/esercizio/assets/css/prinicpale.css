@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body{margin-top: 0;}
+h1,h2,h3,h4,h5,h6 {margin: 0;} */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* $textColorDark: black;
+$textColorLight: #f4f4f4;
+
+$bottoni: #0e6cff, #ff8700, #4caf50;
+$btnPrimary: #0e6cff;
+$btnSecondary: #ff8700;
+$btnTertiary: #4caf50;
+
+$bgHero: #640fc5;
+$bgColor: #f4f4f4; */
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn-primary {
+  background-color: #0e6cff;
+  color: #f4f4f4;
+}
+
+.btn-secondary {
+  background-color: #ff8700;
+  color: #f4f4f4;
+}
+
+.btn-tertiary {
+  background-color: #4caf50;
+  color: #f4f4f4;
+}/*# sourceMappingURL=prinicpale.css.map */

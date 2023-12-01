@@ -1,7 +1,35 @@
-
+/* 
 $padding: 11px 22px 11px 22px;
 
 $margin: 22% 11%;
+ */
 
+$padding-default: 20px;
+$margin-default: 0 auto;
+
+$sizes:(
+    sm: 12px,
+    normal: 16px,
+    md: 24px,
+    lg: 36px,
+    xl: 48px,
+    xxl: 160px,
+);
+
+@mixin create-padding($direction: null){
+    @each $key, $value in $sizes{
+        .pd-#{$direction}-#{$key} {
+            @if $direction {
+                padding-#{$direction}: $value; 
+            } @else {
+                padding: $value;
+            }
+        }
+    }
+}
+
+
+@include create-padding(); //----->> siccome il mixin sopra crea delle classi, non posso richiamarlo dentro una classe. Perciò si richiama il mixin in questa maniera
+@include create-padding(top); //---->> così passo il parametro della direzione al mixin che lo inserirà nella direzione del padding
 
 

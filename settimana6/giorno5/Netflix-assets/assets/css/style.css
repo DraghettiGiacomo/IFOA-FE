@@ -23,22 +23,6 @@
     opacity: 1;
 }
 
-.btnLight {
-    background-color: white;
-}
-
-.btnLight:hover {
-    background-color: white;
-}
-
-.btnLight {
-    background-color: white;
-}
-
-.fakeDisable {
-    background-color: transparent;
-}
-
 .dropdown-menu .dropdown-item:hover {
     background-color: #181b1e;
 }

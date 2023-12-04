@@ -11,6 +11,15 @@
     color: white;
 }
 
+
+.nav-item .fa-bell, .fa-magnifying-glass{
+    color: rgb(255, 255, 255);
+}
+.nav-item .fa-bell:hover,
+.fa-magnifying-glass:hover{
+    color: red;
+}
+
 .carousel-control-prev {
     background: rgb(33, 37, 41);
     background: linear-gradient(90deg, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0) 100%);

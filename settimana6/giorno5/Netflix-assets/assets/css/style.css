@@ -14,6 +14,7 @@
 
 .nav-item .fa-bell, .fa-magnifying-glass{
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 .nav-item .fa-bell:hover,
 .fa-magnifying-glass:hover{

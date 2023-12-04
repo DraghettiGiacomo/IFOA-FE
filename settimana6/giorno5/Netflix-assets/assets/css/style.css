@@ -1,23 +1,45 @@
-
 .squareBtn {
     border-radius: 0;
     background-color: black;
 }
 
-.btnLight{
+.navbar-nav .nav-item .nav-link {
+    color: rgb(118, 118, 118);
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+.carousel-control-prev {
+    background: rgb(33, 37, 41);
+    background: linear-gradient(90deg, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0) 100%);
+    opacity: 1;
+}
+
+.carousel-control-next {
+    background: rgb(33, 37, 41);
+    background: linear-gradient(270deg, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0) 100%);
+    opacity: 1;
+}
+
+.btnLight {
     background-color: white;
 }
-.btnLight:hover{
+
+.btnLight:hover {
     background-color: white;
 }
-.btnLight{
+
+.btnLight {
     background-color: white;
 }
+
 .fakeDisable {
     background-color: transparent;
 }
 
-.dropdown-menu .dropdown-item:hover{
+.dropdown-menu .dropdown-item:hover {
     background-color: #181b1e;
 }
 
@@ -27,8 +49,8 @@
 
 /* pofile page */
 
-header{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(33,37,41,1) 100%);
+header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(33, 37, 41, 1) 100%);
 }
 
 /* pofile page */

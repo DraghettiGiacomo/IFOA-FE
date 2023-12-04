@@ -28,19 +28,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-light" href="#">TV Shows</a>
+                            <a class="nav-link text-light" href="#">TV Shows</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="#">Movies</a>
+                            <a class="nav-link" href="#">Movies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="#">Recently Added</a>
+                            <a class="nav-link" href="#">Recently Added</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light-emphasis" href="#">My List</a>
+                            <a class="nav-link" href="#">My List</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center gap-4 float-end">
@@ -73,7 +73,7 @@
         </nav>
     </header>
 
-    <main class="mt-5 pt-4">
+    <main class="mt-5 py-5">
         <section id="filter" class="mx-4 my-4">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center gap-5">
@@ -106,30 +106,59 @@
                     <div class="col">
                         <h3 class="text-light">Trending Now</h3>
                         <div class="listFilm row d-flex ">
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
+
+                            <div id="carouselExampleIndicators1" class="carousel slide">
+                                <!-- <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div> -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media0.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media1.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media2.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media3.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media4.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media5.webp" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media6.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media7.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media8.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media9.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media10.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media11.jpg" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media12.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media13.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media14.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media15.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media16.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media17.jpg" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+
+                            <!-- <div class="col-2 position-relative">
+                                <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px">
                                 <img src="assets/media/media0.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media1.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media22.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media10.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media11.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media12.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -138,30 +167,55 @@
                     <div class="col">
                         <h3 class="text-light">Watch It Again</h3>
                         <div class="listFilm row d-flex ">
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media13.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media14.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media15.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media16.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media17.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media18.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
+
+                            <div id="carouselExampleIndicators2" class="carousel slide">
+                                <!-- <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div> -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media18.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media19.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media20.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media21.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media22.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media23.webp" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media24.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media25.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media26.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media27.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media28.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media29.jpg" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media30.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media31.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media32.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media0.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media1.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media2.webp" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -170,30 +224,55 @@
                     <div class="col">
                         <h3 class="text-light">New Releases</h3>
                         <div class="listFilm row d-flex ">
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media19.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media2.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media20.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media21.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media23.webp" alt="anteprima film" class="img-fluid">
-                            </div>
-                            <div class="col-2 position-relative">
-                                <!-- <img src="assets/netflix_logo.png" alt="netflix_logo" class="position-absolute top-0 end-0" width="44px"> -->
-                                <img src="assets/media/media24.jpg" alt="anteprima film" class="img-fluid">
-                            </div>
+
+                            <div id="carouselExampleIndicators3" class="carousel slide">
+                                <!-- <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div> -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media3.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media4.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media5.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media6.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media7.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media8.webp" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media9.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media10.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media11.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media12.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media13.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media14.webp" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-2"><img src="assets/media/media15.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media16.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media17.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media18.jpg" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media19.webp" alt="anteprima film" class="img-fluid"></div>
+                                        <div class="col-2"><img src="assets/media/media20.jpg" alt="anteprima film" class="img-fluid"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+
                         </div>
                     </div>
                 </div>
@@ -202,7 +281,7 @@
         </section>
     </main>
 
-    <footer class="mx-4 my-4">
+    <footer class="mx-4 my-4 pt-5">
         <div class="container-fluid p-0">
             <div class="container col-8">
                 <div class="row w-25">

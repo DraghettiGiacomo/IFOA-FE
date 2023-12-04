@@ -43,6 +43,9 @@
     background-color: #181b1e;
 }
 
+.listFilm img{
+    cursor: pointer;
+}
 .listFilm img:hover {
     transform: scale(1.05);
 }

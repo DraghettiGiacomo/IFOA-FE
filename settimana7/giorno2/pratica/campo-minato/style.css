@@ -22,4 +22,5 @@ body{
 }
 .sqaure:hover{
     transform: scale(1.05);
+    background-color: rgb(66, 109, 110);
 }

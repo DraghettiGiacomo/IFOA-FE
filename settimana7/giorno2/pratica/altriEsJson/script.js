@@ -53,4 +53,12 @@ let timer = setInterval(function() {
 
 sessionStorage.setItem('test', 1);
 
+/* --- ptof --- */
 
+let i = sessionStorage.getItem("count") ? parseInt(sessionStorage.getItem("count")) : 0;
+const conta = function (){
+    i = i + 1
+    document.getElementById('counter1').innerText = i;
+    sessionStorage.setItem("count", i)
+}
+setInterval(conta(), 1000)

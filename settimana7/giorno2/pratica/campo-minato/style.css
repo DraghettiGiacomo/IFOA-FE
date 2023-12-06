@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+}
+
+#difficoltà{
+    margin: 22px 0;
+}
+
+#campo{
+    width: 420px;
+    height: 420px;
+    border: 2px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sqaure{
+    width: 40px;
+    height: 40px;
+    background-color: cadetblue;
+    border: 1px solid black;
+}
+.sqaure:hover{
+    transform: scale(1.05);
+}

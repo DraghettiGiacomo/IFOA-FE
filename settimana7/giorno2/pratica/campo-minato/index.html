@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <h1>Campo Minato</h1>
+
+    <form id="difficoltà">
+        <label for="Easy">Easy</label>
+        <input type="radio" id="Easy" name="fav_language" value="Easy">
+        <label for="Medium">Medium</label>
+        <input type="radio" id="Medium" name="fav_language" value="Medium">
+        <label for="Diffiuclt">Diffiuclt</label>
+        <input type="radio" id="Diffiuclt" name="fav_language" value="Diffiuclt">
+    </form>
+
+    <div id="campo"></div>
+
+    <h4 id="punteggio">Point<span id="numeri"></span></h4>
+
+
     <script src="script.js"></script>
 </body>
+
 </html>

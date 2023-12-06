@@ -1,0 +1,49 @@
+/* OGGETTO JSON SINGOLO */
+
+{
+    "nome": "Giusy",
+    "cognome": "ddddd",
+    "città": "Milano"
+}
+
+/* per ora mi da errore perchè ho aperto due graffe assieme e ho messo i commenti */
+
+/* ARRAY DI OGGETTI */
+{
+    "studenti": [
+        {
+            "nome":"Alice",
+            "cognome":"ddddd",
+            "città":"Bologna",
+            "promosso": true,
+            "lingue": [
+                "italiano"
+                "Francese"
+                "Inglese"
+                "Tedesco"
+                "Spagnolo"
+            ],
+            "compleanno":{
+                "giorno": "lunedì",
+                "mese": "Marzo"
+            }
+        },
+        {
+            "nome":"Alice",
+            "cognome":"ddddd",
+            "città":"Bologna",
+            "promosso": false,
+            "lingue": [
+                "italiano"
+                "Francese"
+                "Inglese"
+                "Tedesco"
+                "Spagnolo"
+            ],
+            "compleanno":{
+                "giorno": "lunedì",
+                "mese": "Marzo"
+            }
+        }
+    ]
+}

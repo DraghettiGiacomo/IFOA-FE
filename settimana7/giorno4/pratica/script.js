@@ -38,6 +38,8 @@ function arrayFoto() {
 }
 
 function createCards(data) {
+    let div = document.getElementById('contenitore')
+    div.innerHTML = ''
     data.forEach(element => {
         let singlecard = document.createElement('div')
         singlecard.classList.add('card', 'col-4', 'h-25')

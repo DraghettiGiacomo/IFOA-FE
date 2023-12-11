@@ -21,6 +21,9 @@ body{
     border: 1px solid black;
 }
 .sqaure:hover{
-    transform: scale(1.05);
-    background-color: rgb(66, 109, 110);
+    transform: scale(1.2);
+}
+
+.exploded{
+    background-color: rgb(255, 0, 0);
 }

@@ -84,7 +84,12 @@ function nascondiDelete() {
     btnDelate.style.display = 'none'
 }
 
-
+{/* 
+<button class="btn btn-danger" onclick="deleteProduct(this)">Delete</button>
+const deleteProduct = (el) => {
+    el.closest('.card').remove()
+} 
+*/}
 
 /* -------******-------******-------****** PAGE HOME ******-------******-------******------- */
 

@@ -1,17 +1,19 @@
-/* -------******-------******-------****** PAGE BACK ******-------******-------******------- */
+
 
 /* const deleteCard = (el) => { ///---------->>> delete function
-    fetch(url, {
+    let id = el
+    console.log(id)
+    
+    fetch(url + id, {
         method: 'DELETE',
-        headers: {
-            "Authorization": API,
-            "Content-Type": "application/json"
-        }
+        headers: header
     })
     .then(response => response.json())
     .then(data => console.log(data))
-
+    
     el.closest('.card').remove()
+
+    alert('Sicuro di voler eliminare questo prodotto')
 } */
 
 function vuotaCampi(){
@@ -55,4 +57,3 @@ function saveDetails(el){
     })
 }
 
-/* -------******-------******-------****** PAGE BACK ******-------******-------******------- */

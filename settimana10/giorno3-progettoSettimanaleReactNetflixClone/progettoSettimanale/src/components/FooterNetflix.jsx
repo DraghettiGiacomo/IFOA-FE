@@ -7,7 +7,7 @@ const FooterNetflix = () => {
     textDecoration: 'none'
   }
 
-    return (
+    return ( 
         <>
 
 <footer>

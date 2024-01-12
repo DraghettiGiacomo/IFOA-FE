@@ -9,18 +9,14 @@ function NavbarNetflix () {
 
   return (
     <>
-    <div className='container-fluid bg-dark' style={stileNav}>
+    <div className='container-fluid bg-dark'>
 
-      <nav
-        className="container navbar navbar-expand-lg"
-      >
+      <nav className="container navbar navbar-expand-lg">
         <a className="navbar-brand text-light"><img src={ LogoNetflix } style={{width: '100px'}} /></a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className=" text-light nav-link font-weight-bold"
-                >Home <span className="sr-only">(current)</span></a
-              >
+              <a className=" text-light nav-link font-weight-bold">Home <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item active">
               <a className=" text-light nav-link font-weight-bold">TV Shows</a>

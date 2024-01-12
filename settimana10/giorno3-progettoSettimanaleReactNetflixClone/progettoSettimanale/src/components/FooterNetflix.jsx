@@ -10,8 +10,8 @@ const FooterNetflix = () => {
     return ( 
         <>
 
-<footer>
-          <div class="row text-center mt-5 bg-dark text-light">
+<footer className="container-fluid">
+          <div class="row text-center bg-dark text-light">
             <div class="col-6 offset-3">
               <div class="row">
                 <div class="col col-12 text-left mb-2">

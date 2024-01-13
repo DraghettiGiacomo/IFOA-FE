@@ -6,7 +6,7 @@ const SingleFilm = (film) => {
 
     return(
         <div key={film.film.imdbID} className="col mb-2 px-1">
-            <img className="img-fluid" src={film.film.Poster} alt="movie picture"/>
+            <img className="img-fluid" src={film.film.Poster} alt="movie picture" style={{minHeight: '190px'}}/>
         </div>
     )
 }

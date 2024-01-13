@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #221f1f;
+      }
+
+      h2,
+      h4,
+      footer {
+        color: #f5f5f1;
+      }
+
+      .icons {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 18px;
+        color: #f5f5f1;
+      }
+
+      .navbar-nav {
+        font-size: 0.9em;
+      }
+
+      #kids {
+        color: #f5f5f1;
+        font-size: 0.8em;
+      }
+
+      .footer-icon {
+        font-size: 1.3em;
+        margin-left: 1%;
+        margin-right: 1%;
+        color: #838383;
+      }
+
+      .footer-links {
+        text-align: left;
+        font-size: 0.8em;
+      }
+
+      .footer-links p {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        color: #838383;
+      }
+
+      .footer-links a {
+        color: #838383;
+      }
+
+      .footer-button {
+        color: #838383;
+        border-color: #838383;
+      }
+
+      .copyright {
+        color: #838383;
+        font-size: 0.6em;
+      }
+
+      .col img {
+        transition: transform 0.2s;
+      }
+
+      .col img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <title>Epiflix</title>
+  </head>
+  <body>
+    <div>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #221f1f"
+      >
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" style="width: 100px; height: 55px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bold" href="#">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="#">My List</a>
+            </li>
+          </ul>
+          <i class="fa fa-search icons"></i>
+          <div id="kids">KIDS</div>
+          <i class="fa fa-bell icons"></i>
+          <i class="fa fa-user icons"></i>
+        </div>
+      </nav>
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <h2 class="mb-4">TV Shows</h2>
+            <div class="dropdown ml-4 mt-1">
+              <button
+                class="btn btn-secondary btn-sm dropdown-toggle rounded-0"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="background-color: #221f1f"
+              >
+                Genres &nbsp;
+              </button>
+              <div
+                class="dropdown-menu bg-dark"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item text-white bg-dark" href="#">Comedy</a>
+                <a class="dropdown-item text-white bg-dark" href="#">Drama</a>
+                <a class="dropdown-item text-white bg-dark" href="#"
+                  >Thriller</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <i class="fa fa-th-large icons"></i>
+            <i class="fa fa-th icons"></i>
+          </div>
+        </div>
+        <h4>Trending Now</h4>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center"
+        >
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/1.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/2.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/3.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/4.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/5.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/6.png" alt="movie picture" />
+          </div>
+        </div>
+        <h4>Watch it Again</h4>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center"
+        >
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/7.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/8.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/9.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/10.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/11.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/12.png" alt="movie picture" />
+          </div>
+        </div>
+        <h4>New Releases</h4>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center"
+        >
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/13.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/14.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/15.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/16.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/17.png" alt="movie picture" />
+          </div>
+          <div class="col mb-2 px-1">
+            <img class="img-fluid" src="assets/18.png" alt="movie picture" />
+          </div>
+        </div>
+        <footer>
+          <div class="row text-center mt-5">
+            <div class="col-6 offset-3">
+              <div class="row">
+                <div class="col col-12 text-left mb-2">
+                  <i class="fa fa-facebook footer-icon"></i>
+                  <i class="fa fa-instagram footer-icon"></i>
+                  <i class="fa fa-twitter footer-icon"></i>
+                  <i class="fa fa-youtube footer-icon"></i>
+                </div>
+              </div>
+              <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg 4"
+              >
+                <div class="col">
+                  <div class="row">
+                    <div class="col col-12 footer-links">
+                      <p>
+                        <a href="#" alt="footer link">Audio and Subtitles</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Media Center</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Privacy</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Contact us</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col col-12 footer-links">
+                      <p>
+                        <a href="#" alt="footer link">Audio Description</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Investor Relations</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Legal Notices</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col col-12 footer-links">
+                      <p>
+                        <a href="#" alt="footer link">Help Center</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Jobs</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Cookie Preferences</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col col-12 footer-links">
+                      <p>
+                        <a href="#" alt="footer link">Gift Cards</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Terms of Use</a>
+                      </p>
+                      <p>
+                        <a href="#" alt="footer link">Corporate Information</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-12 text-left mb-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm footer-button rounded-0 mt-3"
+                  >
+                    Service Code
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-12 text-left mb-2 mt-2 copyright">
+                  © 1997-2022 Netflix, Inc.
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

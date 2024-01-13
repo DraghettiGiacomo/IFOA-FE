@@ -9,7 +9,7 @@ function NavbarNetflix () {
 
   return (
     <>
-    <div className='container-fluid bg-dark'>
+    <div className='container-fluid'>
 
       <nav className="container navbar navbar-expand-lg">
         <a className="navbar-brand text-light"><img src={ LogoNetflix } style={{width: '100px'}} /></a>
@@ -32,10 +32,10 @@ function NavbarNetflix () {
             </li>
           </ul>
           <div className='d-flex gap-3 align-items-center'>
-            <i className="text-light fa fa-search icons"></i>
-            <div className="text-light" id="kids">KIDS</div>
-            <i className="text-light fa fa-bell icons"></i>
-            <i className="fa fa-user icons text-light"></i>
+            <i className="fa fa-search icons"></i>
+            <div id="kids">KIDS</div>
+            <i className="fa fa-bell icons"></i>
+            <i className="fa fa-user icons"></i>
           </div>
         </div>
       </nav>

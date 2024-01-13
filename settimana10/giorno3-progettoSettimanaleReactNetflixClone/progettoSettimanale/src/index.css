@@ -3,6 +3,7 @@ body {
   background-color: #221f1f;
 }
 
+h1,
 h2,
 h4,
 footer {
@@ -18,6 +19,18 @@ footer {
 
 .navbar-nav {
   font-size: 0.9em;
+}
+
+.nav-link{
+  color: #838383;;
+}
+
+.active .nav-link {
+  color: #ffff;
+}
+
+.nav-link:hover {
+  color: #ffff;
 }
 
 #kids {
@@ -63,4 +76,15 @@ footer {
 
 .col img:hover {
   transform: scale(1.1);
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #828282ff;
+  border-radius: 50px;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import LogoNetflix from '../assets/Logo.png'
+import ImgAvatar from '../assets/avatar.png'
+import IconKidsFilm from '../assets/kids_icon.png' 
 
 function NavbarNetflix () {
 
@@ -16,26 +18,26 @@ function NavbarNetflix () {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className=" text-light nav-link font-weight-bold">Home <span className="sr-only">(current)</span></a>
+              <a className="nav-link font-weight-bold">Home <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item active">
-              <a className=" text-light nav-link font-weight-bold">TV Shows</a>
+              <a className="nav-link font-weight-bold">TV Shows</a>
             </li>
             <li className="nav-item">
-              <a className=" text-light nav-link font-weight-bold">Movies</a>
+              <a className="nav-link font-weight-bold">Movies</a>
             </li>
             <li className="nav-item">
-              <a className=" text-light nav-link font-weight-bold">Recently Added</a>
+              <a className="nav-link font-weight-bold">Recently Added</a>
             </li>
             <li className="nav-item">
-              <a className=" text-light nav-link font-weight-bold">My List</a>
+              <a className="nav-link font-weight-bold">My List</a>
             </li>
           </ul>
           <div className='d-flex gap-3 align-items-center'>
             <i className="fa fa-search icons"></i>
-            <div id="kids">KIDS</div>
+            <img src={ IconKidsFilm } alt="logo netflix" height="30px" width="30px" />
             <i className="fa fa-bell icons"></i>
-            <i className="fa fa-user icons"></i>
+            <img src={ ImgAvatar } alt="logo netflix" height="30px" width="30px" />
           </div>
         </div>
       </nav>

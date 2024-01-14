@@ -12,15 +12,15 @@ const HeroNetflix = () => {
                                 className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
                                 type="button"
                                 id="dropdownMenuButton"
-                                data-toggle="dropdown"
+                                data-bs-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="false"
-                                style={{backgroundColor: '#221f1f'}}
+                                style={{ backgroundColor: '#221f1f' }}
                             >
                                 Genres &nbsp;
                             </button>
                             <div
-                                className="dropdown-menu bg-dark"
+                                className="dropdown-menu bg-dark rounded-0"
                                 aria-labelledby="dropdownMenuButton"
                             >
                                 <a className="dropdown-item text-white bg-dark" href="#">Comedy</a>

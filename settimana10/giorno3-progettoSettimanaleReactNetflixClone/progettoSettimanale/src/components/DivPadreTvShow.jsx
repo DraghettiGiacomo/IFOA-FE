@@ -10,7 +10,8 @@ const DivPadreTvShow = () => {
         'Harry Potter', 
         'Star wars', 
         'The lord of the rings',
-        'One Piece'
+        'Hobbit',
+        'Twilight'
     ];
 
     /* const nomiSageDaCercare1 = {

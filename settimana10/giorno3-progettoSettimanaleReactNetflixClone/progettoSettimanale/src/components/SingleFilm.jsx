@@ -16,7 +16,7 @@ const SingleFilm = (film) => {
     return (
         <>
             <div key={film.film.imdbID} className="col mb-2 px-1" onClick={handleShow}>
-                <img className="img-fluid" src={film.film.Poster} alt="movie picture" style={{ minHeight: '190px' }} />
+                <img className="img-fluid" src={film.film.Poster} alt="movie picture" style={{ minHeight: '190px', maxHeight: '190px' }} />
             </div>
             {/* <ModalInfoFilm show={show} onHide={handleClose}/> */}
 

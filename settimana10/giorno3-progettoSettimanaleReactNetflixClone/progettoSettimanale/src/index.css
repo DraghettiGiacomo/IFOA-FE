@@ -19,6 +19,7 @@ footer {
 
 .navbar-nav {
   font-size: 0.9em;
+  cursor: pointer;
 }
 
 .nav-link{

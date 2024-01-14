@@ -21,13 +21,13 @@ const SingleFilm = (film) => {
             {/* <ModalInfoFilm show={show} onHide={handleClose}/> */}
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header className="bg-dark text-light" closeButton>
+                <Modal.Header className="bg-secondary text-black" closeButton>
                     <Modal.Title>{film.film.Title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="bg-dark text-light">
+                <Modal.Body className="bg-secondary text-black">
                     Release date: {film.film.Year}
                 </Modal.Body>
-                <Modal.Footer className="bg-dark text-light">
+                <Modal.Footer className="bg-secondary text-black">
                     Code: {film.film.imdbID}
                 </Modal.Footer>
             </Modal>

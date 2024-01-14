@@ -1,30 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SingleGalley from "./SingleGallery";
 import Galley1 from "./Gallery1";
 import Galley2 from "./Gallery2";
 import Galley3 from "./Gallery3";
 
-const DivPadreTvShow = () => {
-
-    const nomiSageDaCercare = [
-        'Harry Potter', 
-        'Star wars', 
-        'The lord of the rings',
-        'Hobbit',
-        'Twilight'
-    ];
-
-    /* const nomiSageDaCercare1 = {
-        saga1: 'Harry Potter',
-        saga2: 'The lord of the rings',
-        saga3: 'Star wars'
-    } */
+const DivPadreTvShow = (props) => {
 
     return (
         <>
-            <div>
-                {nomiSageDaCercare.map((nome) => <SingleGalley nome={nome} />)}
-            </div>
+            
+            {props.arrySage.map((nome, index) => <div key={index}> <SingleGalley nome={nome}/> </div>)}
             {/* <SingleGalley nome={nomiSageDaCercare} /> */}
             {/* <div>
                 <Galley1 nome={nomiSageDaCercare1.saga1}/>

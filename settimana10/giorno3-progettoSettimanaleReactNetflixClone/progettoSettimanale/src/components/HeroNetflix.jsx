@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-const HeroNetflix = () => {
+const HeroNetflix = ( addNewSagaTitle) => {
 
     const [show, setShow] = useState(false);
 
@@ -12,11 +12,15 @@ const HeroNetflix = () => {
     const handleShow = () => setShow(true);
 
 
-    let TextAreaSagaFilmDaAggiungere = document.getElementById('TextAreaSagaFilmDaAggiungere')
+    /* let TextAreaSagaFilmDaAggiungere = document.getElementById('TextAreaSagaFilmDaAggiungere')
 
-    const ProvaRecuperoDatiDaTextArea = () => {
+    let ProvaRecuperoDatiDaTextArea = () => {
         console.log(TextAreaSagaFilmDaAggiungere.value);
-    }
+    } */
+
+    /* const prova = () => {
+        props.addNewSagaTitle(document.getElementById('TextAreaSagaFilmDaAggiungere').value)
+    } */
 
     return (
         <>
@@ -47,20 +51,20 @@ const HeroNetflix = () => {
                         </div>
                     </div>
                     <div className="d-flex align-items-center">
-                        <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button>
+                        {/* <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button> */}
                         <i className="fa fa-th-large icons"></i>
                         <i className="fa fa-th icons"></i>
                     </div>
                 </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            {/* <Modal show={show} onHide={handleClose}>
                 <Modal.Header className="bg-dark text-light" closeButton>
                     <Modal.Title>Aggiungi una saga televisiva</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="bg-dark text-light">
                     <Form>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Group className="mb-3">
                             <Form.Label>Digita il nome della saga da inserire</Form.Label>
                             <Form.Control id="TextAreaSagaFilmDaAggiungere" className="bg-dark text-light" as="textarea" rows={3}/>
                         </Form.Group>
@@ -70,11 +74,11 @@ const HeroNetflix = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="light" onClick={ProvaRecuperoDatiDaTextArea}>
+                    <Button variant="light"  onClick={prova}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */}
 
         </>
     );

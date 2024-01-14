@@ -37,7 +37,25 @@ function NavbarNetflix () {
             <i className="fa fa-search icons"></i>
             <img src={ IconKidsFilm } alt="logo netflix" height="30px" width="30px" />
             <i className="fa fa-bell icons"></i>
-            <img src={ ImgAvatar } alt="logo netflix" height="30px" width="30px" />
+            <div className="dropdown ml-4 mt-0">
+                            {/* <button
+                                className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                style={{ backgroundColor: '#221f1f' }}
+                            >
+                                Genres &nbsp;
+                            </button> */}
+                            <img src={ ImgAvatar } alt="logo netflix" height="30px" width="30px" /* className='dropdown-toggle'  id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  *//>
+                            <div className="dropdown-menu bg-dark rounded-0" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item text-white bg-dark" href="#">Comedy</a>
+                                <a className="dropdown-item text-white bg-dark" href="#">Drama</a>
+                                <a className="dropdown-item text-white bg-dark" href="#">Thriller</a>
+                            </div>
+                        </div>
           </div>
         </div>
       </nav>

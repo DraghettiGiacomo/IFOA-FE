@@ -13,7 +13,7 @@ const SingleGalley = (nome) => {
             const risposta = await fetch(URL + (nome.nome))
             if(risposta.ok){
                 let data = await risposta.json()
-                console.log(data);
+                /* console.log(data); */
                 setGallery(data.Search)
             } else {
                 console.log('errore nella risposta fetch');

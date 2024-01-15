@@ -75,7 +75,7 @@ const HeroNetflix = ( addNewSagaTitle) => {
                         Close
                     </Button>
                     <Button variant="light"  onClick={prova}>
-                        Save Changes
+                        Search Saga
                     </Button>
                 </Modal.Footer>
             </Modal> */}

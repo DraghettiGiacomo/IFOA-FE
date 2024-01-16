@@ -4,23 +4,21 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-const HeroNetflix = ( addNewSagaTitle) => {
+const HeroNetflix = (props) => {
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    //prova per passare il dato al padre
+    const [newSaga, setSaga] = useState()
 
-    /* let TextAreaSagaFilmDaAggiungere = document.getElementById('TextAreaSagaFilmDaAggiungere')
-
-    let ProvaRecuperoDatiDaTextArea = () => {
-        console.log(TextAreaSagaFilmDaAggiungere.value);
-    } */
-
-    /* const prova = () => {
-        props.addNewSagaTitle(document.getElementById('TextAreaSagaFilmDaAggiungere').value)
-    } */
+    const prova = () => {
+        handleClose()
+        /* console.log(newSaga) */
+        props.spostamentoSaga(newSaga)
+    }
 
     return (
         <>
@@ -51,14 +49,14 @@ const HeroNetflix = ( addNewSagaTitle) => {
                         </div>
                     </div>
                     <div className="d-flex align-items-center">
-                        {/* <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button> */}
+                        <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button>
                         <i className="fa fa-th-large icons"></i>
                         <i className="fa fa-th icons"></i>
                     </div>
                 </div>
             </div>
 
-            {/* <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header className="bg-dark text-light" closeButton>
                     <Modal.Title>Aggiungi una saga televisiva</Modal.Title>
                 </Modal.Header>
@@ -66,7 +64,7 @@ const HeroNetflix = ( addNewSagaTitle) => {
                     <Form>
                         <Form.Group className="mb-3">
                             <Form.Label>Digita il nome della saga da inserire</Form.Label>
-                            <Form.Control id="TextAreaSagaFilmDaAggiungere" className="bg-dark text-light" as="textarea" rows={3}/>
+                            <Form.Control id="TextAreaSagaFilmDaAggiungere" className="bg-dark text-light" as="textarea" rows={3} value={newSaga} onChange={(e) => setSaga(e.target.value)}/>
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -74,11 +72,11 @@ const HeroNetflix = ( addNewSagaTitle) => {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="light"  onClick={prova}>
+                    <Button variant="light" onClick={prova}>
                         Search Saga
                     </Button>
                 </Modal.Footer>
-            </Modal> */}
+            </Modal>
 
         </>
     );

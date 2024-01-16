@@ -4,7 +4,6 @@ import DivPadreTvShow from './DivPadreTvShow';
 import { useEffect } from 'react';
 
 const MainNetflix = () => {
-
     
     const nomiSageDaCercare = [
         'Harry Potter', 
@@ -13,23 +12,20 @@ const MainNetflix = () => {
         'Hobbit'
     ];
 
-    // PROVA PER AGGIUNGERE DINAMICAMENTE UNA NUOVA SAGA ALLA PAGINA
-    /* let sagaRicevuta
-    
-    const spostamentoSgaRicevuta = (data) => {
-        console.log(data);
-        sagaRicevuta = data
-        console.log(sagaRicevuta);
+    //prova per portare i dati al genitore
+    const spostamentoSaga = (data) => {
+        nomiSageDaCercare.unshift(data)
+        console.log(nomiSageDaCercare); 
     }
 
     useEffect(() => {
-        nomiSageDaCercare.unshift(sagaRicevuta)
-    }, [sagaRicevuta]) */
+        console.log('ciao');
+    }, [nomiSageDaCercare])
 
     return (
         <>
-            <HeroNetflix /* addNewSagaTitle={spostamentoSgaRicevuta} */ />
-            <DivPadreTvShow arrySage={nomiSageDaCercare} />
+            <HeroNetflix spostamentoSaga={spostamentoSaga} />
+            <DivPadreTvShow arraySage={nomiSageDaCercare} />
         </>
     )
 }

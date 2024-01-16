@@ -9,7 +9,7 @@ const DivPadreTvShow = (props) => {
     return (
         <>
             
-            {props.arrySage.map((nome, index) => <div key={index}> <SingleGalley nome={nome}/> </div>)}
+            {props.arraySage.map((nome, index) => <div key={index}> <SingleGalley nome={nome}/> </div>)}
             {/* <SingleGalley nome={nomiSageDaCercare} /> */}
             {/* <div>
                 <Galley1 nome={nomiSageDaCercare1.saga1}/>

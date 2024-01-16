@@ -17,7 +17,7 @@ const HeroNetflix = (props) => {
     const prova = () => {
         handleClose()
         /* console.log(newSaga) */
-        props.spostamentoSaga(newSaga)
+        /* props.spostamentoSaga(newSaga) */
     }
 
     return (

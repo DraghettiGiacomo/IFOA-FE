@@ -12,13 +12,13 @@ const HeroNetflix = (props) => {
     const handleShow = () => setShow(true);
 
     //prova per passare il dato al padre
-    const [newSaga, setSaga] = useState()
+    /* const [newSaga, setSaga] = useState()
 
     const prova = () => {
         handleClose()
-        /* console.log(newSaga) */
-        /* props.spostamentoSaga(newSaga) */
-    }
+        /* console.log(newSaga)
+        props.spostamentoSaga(newSaga)
+    } */
 
     return (
         <>
@@ -49,14 +49,14 @@ const HeroNetflix = (props) => {
                         </div>
                     </div>
                     <div className="d-flex align-items-center">
-                        <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button>
+                        {/* <button onClick={handleShow} className="btn btn-secondary btn-sm rounded-0" type="button" id="dropdownMenuButton" style={{ backgroundColor: '#221f1f' }}>Aggiungi saga televisiva &nbsp;</button> */}
                         <i className="fa fa-th-large icons"></i>
                         <i className="fa fa-th icons"></i>
                     </div>
                 </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            {/* <Modal show={show} onHide={handleClose}>
                 <Modal.Header className="bg-dark text-light" closeButton>
                     <Modal.Title>Aggiungi una saga televisiva</Modal.Title>
                 </Modal.Header>
@@ -76,7 +76,7 @@ const HeroNetflix = (props) => {
                         Search Saga
                     </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */}
 
         </>
     );

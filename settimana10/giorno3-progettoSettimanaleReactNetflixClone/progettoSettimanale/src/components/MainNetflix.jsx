@@ -5,10 +5,8 @@ import { useEffect, useState } from 'react';
 
 const MainNetflix = () => {
 
-    const [nomiSageDaCercare, setnomiSageDaCercare] = useState([
-        'Harry Potter', 
+    const [nomiSageDaCercare, setnomiSageDaCercare] = useState([ 
         'Star wars', 
-        'Avengers', 
         'The lord of the rings',
         'Hobbit'
     ])
@@ -25,10 +23,13 @@ const MainNetflix = () => {
         setnomiSageDaCercare(nomiSageDaCercare.unshift(data))
         console.log(nomiSageDaCercare); 
     }
-
+    let sageDaRenderizzare
     useEffect(() => {
-        console.log('ciao');
-    }, [nomiSageDaCercare]) */ 
+        if(nomiSageDaCercare.lenght > 3){
+            console.log('ciao');
+            sageDaRenderizzare = nomiSageDaCercare
+        }
+    }, [nomiSageDaCercare])  */
 
     return (
         <>

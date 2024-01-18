@@ -6,6 +6,8 @@ import Galley3 from "./Gallery3";
 
 const DivPadreTvShow = (props) => {
 
+    console.log(props);
+
     return (
         <>
             

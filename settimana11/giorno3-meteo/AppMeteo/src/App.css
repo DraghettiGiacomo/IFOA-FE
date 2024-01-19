@@ -49,7 +49,7 @@ body{
 }
 
 #topDati{
-    height: 60%;
+    height: 55%;
 }
 #topDati>div{
     margin: auto 0;
@@ -79,6 +79,18 @@ body{
     height: 50%;
 }
 
+.sunset, .sunrise{
+    font-size: 22px;
+}
 
+.rightSomeDati{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 139, 139, 0.7);
+    display: flex;
+    justify-content: space-between;
+}
+.rightSomeDati h6 span{
+    font-weight: 400;
+}
 
 /* DATI */

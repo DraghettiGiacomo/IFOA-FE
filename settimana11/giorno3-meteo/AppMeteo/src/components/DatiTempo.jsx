@@ -46,7 +46,7 @@ const DatiTempo = (props) => {
                                 <p>{props.dati?.wind?.deg}°</p>
                             </div>
                         </div>
-                        <div className='d-flex flex-column justify-content-center align-items-center'>
+                        <div className='d-flex flex-column justify-content-center'>
                             <div className="d-flex gap-2 align-items-center">
                                 <p>{props.dati?.sys?.sunrise}</p>
                                 <i class="bi bi-sunrise-fill sunrise"></i>

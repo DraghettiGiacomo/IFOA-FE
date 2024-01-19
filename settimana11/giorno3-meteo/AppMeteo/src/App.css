@@ -1,0 +1,84 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+    padding: 0;
+    color: rgb(27, 40, 40);
+}
+
+body{
+    background-color: rgba(0, 139, 139, 0.22);
+    padding: 11px 4px;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+
+/* SEARCH */
+#inputCity{
+    border: 1px solid rgb(0, 139, 139);
+    max-width: fit-content;
+    padding: 9px 22px;
+    border-radius: 50px;
+}
+
+#inputCity #searchBar{
+    margin: 0 auto;
+    width: 20%;
+}
+
+#inputCity input {
+    background-color: transparent;
+    border: 0;
+}
+
+#inputCity input:focus-visible{
+    outline: 1px solid rgba(0, 0, 0, 0);
+}
+/* SEARCH */
+
+/* DATI */
+
+#DatiContainer{
+    height: 80vh;
+    margin-top: 2%;
+}
+
+#topDati{
+    height: 60%;
+}
+#topDati>div{
+    margin: auto 0;
+}
+
+#bottomDati{
+    height: 40%;
+}
+
+#bottomDati #righttDati,
+#bottomDati #leftDati>div{
+    padding: 9px;
+    /* border: 1px solid black; */
+    border-radius: 9px;
+    background-color: rgba(0, 139, 139, 0.22);
+}
+
+#bottomDati #righttDati{
+    height: 100%;
+}
+
+#bottomDati #leftDati{
+    height: 100%;
+}
+
+#bottomDati #leftDati>div{
+    height: 50%;
+}
+
+
+
+/* DATI */

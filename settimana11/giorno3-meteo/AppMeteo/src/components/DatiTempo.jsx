@@ -5,12 +5,13 @@ const DatiTempo = (props) => {
     
     let gradiKelvin = 273
 
-    /* const sfondo = () => {
-        if((props.dati.main.temp - gradiKelvin).toFixed() > 22){
+    const sfondo = () => {
+        if((props.dati?.main?.temp - gradiKelvin).toFixed() > 3){
             let body = document.getElementsByName('body')
             body.style.backgroundColor = '#C7F9CC'
         }
-    } */
+    }
+    sfondo()
 
     return(
         <>
@@ -30,7 +31,7 @@ const DatiTempo = (props) => {
                     <div className="d-flex flex-column gap-2 align-items-center">
                         <h1><span  className="display-1 fw-bold">{(props.dati?.main?.temp - gradiKelvin).toFixed()}</span> °C</h1>
                         <div className='d-flex gap-2 justify-content-center align-item-center'>
-                            <i class="bi bi-cloud-fill"></i>
+                            <i className="bi bi-cloud-fill"></i>
                             <p >{props.dati?.clouds?.all}</p>
                         </div>
                         {/* <p><b>{props.dati?.weather[0].description}</b></p> */}
@@ -53,7 +54,7 @@ const DatiTempo = (props) => {
                             </div>
                             <div className="d-flex gap-2 align-items-center">
                                 <p>{props.dati?.sys?.sunset}</p>
-                                <i class="bi bi-sunset-fill sunset"></i>
+                                <i className="bi bi-sunset-fill sunset"></i>
                             </div>
                         </div>
                     </div>

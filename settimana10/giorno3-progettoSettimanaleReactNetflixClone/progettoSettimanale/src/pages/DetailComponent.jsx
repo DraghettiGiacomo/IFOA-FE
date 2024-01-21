@@ -45,7 +45,7 @@ const DetailComponent = () => {
 
     return(
         <>
-            <div className="container text-light">
+            <div className="container text-light my-5">
                 <div className="row">
                     <div className="col d-flex gap-5">
                         <img src={filmDetails.Poster} alt={"poster di" + (filmDetails.Title)} />

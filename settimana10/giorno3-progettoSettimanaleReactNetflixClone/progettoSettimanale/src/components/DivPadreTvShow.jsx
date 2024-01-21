@@ -6,12 +6,12 @@ import Galley3 from "./Gallery3";
 
 const DivPadreTvShow = (props) => {
 
-    console.log(props);
+    /* console.log(props.nomiSageDaCercare); */
 
     return (
         <>
             
-            {props.arraySage.map((nome, index) => <div key={index}> <SingleGalley nome={nome}/> </div>)}
+            {props.nomiSageDaCercare.map((nome, index) => <div key={index}> <SingleGalley nome={nome}/> </div>)}
             {/* <SingleGalley nome={nomiSageDaCercare} /> */}
             {/* <div>
                 <Galley1 nome={nomiSageDaCercare1.saga1}/>

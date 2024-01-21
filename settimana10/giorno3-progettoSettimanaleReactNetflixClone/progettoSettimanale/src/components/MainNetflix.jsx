@@ -6,10 +6,39 @@ import { useEffect, useState } from 'react';
 const MainNetflix = () => {
 
     const [nomiSageDaCercare, setnomiSageDaCercare] = useState([ 
+        'Shrek', 
         'Star wars', 
         'The lord of the rings',
-        'Hobbit'
-    ])
+        'Hobbit',
+        'Naruto',
+        'One PIece',
+        'Avengers',
+        'The Crown',
+        'Jaws',
+        'Terminator',
+        'Star Trek',
+        'American Pie',
+        'Madagascar',
+        'Friends',
+        '007',
+        'Mission Impossible',
+        'Sherlock Holmes',
+        'Spider-Man'
+    ]) 
+
+    const daCercare = []
+
+    const cambio = () => {     
+        
+        for(let i = 0; i < 3; i++){
+            
+            let numCasual = Math.floor(Math.random() * nomiSageDaCercare.length)
+
+            daCercare.push(nomiSageDaCercare[numCasual])
+            console.log(daCercare);
+        }
+    }
+    cambio()
     
     /* const nomiSageDaCercare = [
         'Harry Potter', 
@@ -22,19 +51,18 @@ const MainNetflix = () => {
     /* const spostamentoSaga = (data) => {
         setnomiSageDaCercare(nomiSageDaCercare.unshift(data))
         console.log(nomiSageDaCercare); 
-    }
-    let sageDaRenderizzare
-    useEffect(() => {
-        if(nomiSageDaCercare.lenght > 3){
+    } */
+    
+    /* useEffect(() => {
             console.log('ciao');
-            sageDaRenderizzare = nomiSageDaCercare
-        }
+            let nuovo = nomiSageDaCercare
+            console.log(nuovo);
     }, [nomiSageDaCercare])  */
 
     return (
         <>
             <HeroNetflix /* spostamentoSaga={spostamentoSaga} */ />
-            <DivPadreTvShow arraySage={nomiSageDaCercare} />
+            <DivPadreTvShow nomiSageDaCercare={daCercare} />
         </>
     )
 }

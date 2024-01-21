@@ -4,6 +4,8 @@ import SingleFilm from "./SingleFilm";
 
 const SingleGalley = (nome) => {
 
+    console.log(nome.nome); //Il problema è che 'nome.nome' è composto da più nomi di serie
+
     const URL = 'https://www.omdbapi.com/?apikey=a969db2c&s='
 
     const [galleria, setGallery] = useState([])
@@ -32,7 +34,7 @@ const SingleGalley = (nome) => {
         <div className="container">
             <h4>{nome.nome}</h4>
             <div className="row mb-4 no-gutters text-center">
-                {galleria.map((film, index) => <SingleFilm key={index} film={film}/>)}
+                {galleria.map((film, index) => <SingleFilm key={index} saga={nome.nome} film={film}/>)}
             </div>
         </div> 
     )

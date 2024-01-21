@@ -1,13 +1,9 @@
 import React from 'react';
 import LogoNetflix from '../assets/Logo.png'
 import ImgAvatar from '../assets/avatar.png'
-import IconKidsFilm from '../assets/kids_icon.png' 
+import IconKidsFilm from '../assets/kids_icon.png'
 
 function NavbarNetflix () {
-
-  const stileNav = {
-    marginTop: '50px'
-  }
 
   return (
     <>

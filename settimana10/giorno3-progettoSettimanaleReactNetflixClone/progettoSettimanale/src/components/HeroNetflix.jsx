@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-const HeroNetflix = (props) => {
+const HeroNetflix = ({spostamentoSaga}) => {
 
     const [show, setShow] = useState(false);
 
@@ -16,8 +16,8 @@ const HeroNetflix = (props) => {
 
     const prova = () => {
         handleClose()
-        /* console.log(newSaga)
-        props.spostamentoSaga(newSaga)
+         console.log(newSaga)
+        spostamentoSaga(newSaga)
     } */
 
     return (

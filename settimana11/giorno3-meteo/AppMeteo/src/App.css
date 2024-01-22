@@ -4,10 +4,12 @@ h3,
 h4,
 h5,
 h6,
-p{
+p,
+a{
     margin: 0;
     padding: 0;
     color: rgb(27, 40, 40);
+    text-decoration: none;
 }
 
 body{
@@ -49,7 +51,7 @@ body{
 }
 
 #topDati{
-    height: 55%;
+    height: 40%;
 }
 #topDati>div{
     margin: auto 0;
@@ -59,12 +61,39 @@ body{
     height: 40%;
 }
 
+#today, #grafico{
+    overflow-x: scroll;
+}
+#today::-webkit-scrollbar,
+#grafico::-webkit-scrollbar {
+    height: 3px;
+}
+#today::-webkit-scrollbar-track,
+#grafico::-webkit-scrollbar-track {
+    border-radius: 9px;
+}
+#today::-webkit-scrollbar-thumb,
+#grafico::-webkit-scrollbar-thumb {
+    background-color: #0066ce;
+    border-radius: 9px;
+}
+
+#nextDays #today #ore,
+#collapseExample {
+    background-color: rgba(0, 139, 139, 0.22);
+    border-radius: 6px;
+    padding: 12px;
+}
+
 #bottomDati #righttDati,
+#nextDays,
+#grafico,
 #bottomDati #leftDati>div{
-    padding: 9px;
+    padding: 18px;
     /* border: 1px solid black; */
     border-radius: 9px;
     background-color: rgba(0, 139, 139, 0.22);
+    width: 100%;
 }
 
 #bottomDati #righttDati{

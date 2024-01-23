@@ -1,17 +1,28 @@
+import { useEffect, useState } from "react";
 import { createElement } from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 const DatiTempo = (props) => { 
 
+    // ho fatto una variabile per calcolare la temperatura in celsius
     let gradiKelvin = 273
-    console.log(props.dati);
-    console.log(props.datiNextDays);
 
-    let sunrise = Date(props.dati?.sys?.sunrise)
-    let sunset = Date(props.dati?.sys?.sunset)
-    console.log(sunrise.slice(17, 24));
-    console.log(sunset);
+    //calcolo l'orario del sorgere e del tramonto del sole, partendo da un valore timestamp
+    let timestampSunrise = props.dati?.sys?.sunrise
+    let timestampSunset = props.dati?.sys?.sunset
 
+    let dataSunrise = new Date(timestampSunrise * 1000); // Creo un oggetto Date utilizzando il timestamp. Moltiplica per 1000 per convertire da secondi a millisecondi
+    let dataSunset = new Date(timestampSunset * 1000);
+
+    let oreSunrise = dataSunrise.getHours(); // Estraggo l'ora e i minuti da dataSunrise/dataSunset
+    let minutiSunrise = dataSunrise.getMinutes();
+    let oreSunset = dataSunset.getHours();
+    let minutiSunset = dataSunset.getMinutes();
+
+    let orarioSunrise = oreSunrise + ':' + minutiSunrise; // Formatto l'orario come stringa
+    let orarioSunset =  oreSunset + ':' + minutiSunset;
+
+    // ho creato questo array per poter scrivere in maniera dianmica a che giorno si riferiva il meteo dei prossimi giorni 
     const giorniSettimana = [
         'Domenica',
         'Lunedì',
@@ -21,6 +32,7 @@ const DatiTempo = (props) => {
         'Venerdì',
         'Sabato'
     ]
+
     //qua recupero il giorno e l'oario corrente per poter recuperare parte degli oggetti dell'array deelle previsioni dei possimi giorni
     let data = new Date()
     let currentDate = data.toJSON()
@@ -28,6 +40,7 @@ const DatiTempo = (props) => {
     let year = data.getFullYear()
     let month = data.getMonth()
 
+    // recupero i dati della fetch che riguardano il giorno corrente, per poi fare il map dell'array
     let oggi = []
     function todayMeteo() {
         props?.datiNextDays.list?.forEach((el) => {
@@ -36,28 +49,44 @@ const DatiTempo = (props) => {
         })
     } todayMeteo()
     
+    // salvo in un array i dati della fetch che riguardano i prossimi giorni, per poi fare il map dell'array
     let nextDaysDate = []
-    let sett = []
     function nextdayMeteo() {
-
         props?.datiNextDays.list?.forEach((el) => {
             if(el.dt_txt.includes('12:00:00') === true){
-                console.log(true);
                 nextDaysDate.push(el)
-                console.log(el);
             } else {
-                console.log(false);
+                console.log('non sono stato pushato');
             }
         })
     } nextdayMeteo()
 
-    const graficoData = []
+    // repurero i dati dagli array salvati prima e li sposto in un oggetto che poi passerò al grafico
     let partenza = 0
+    const graficoDataNextDays = []
+    const graficoDataToday = []
     function datiGrafico(){
-        props?.datiNextDays?.list?.forEach((el) => {
-            graficoData.push({name: `${partenza < 23 ? partenza += 3 : partenza = null}:00`/* `${el.dt_txt.slice(11)}` */, uv: (el.main.temp_max - gradiKelvin), pv: (el.main.temp - gradiKelvin), amt: (el.main.min - gradiKelvin)})
+        nextDaysDate.forEach((el) => {
+            graficoDataNextDays.push({name: `${partenza < 23 ? partenza += 3 : partenza = 0}:00`, uv: (el.main.temp - gradiKelvin), pv: (el.main.temp_max - gradiKelvin), amt: (el.main.min - gradiKelvin)})
+        })
+        oggi.forEach((el) => {
+            graficoDataToday.push({name: `${partenza < 23 ? partenza += 3 : partenza = 0}:00`, uv: (el.main.temp_max - gradiKelvin), pv: (el.main.temp - gradiKelvin), amt: (el.main.min - gradiKelvin)})
         })
     } datiGrafico()
+
+    // cambio il grafico a seconda di quale link premo 
+    const [daPassare, setdaPassare] = useState(graficoDataNextDays) 
+
+    function changeToday(){
+        setdaPassare(graficoDataToday)
+        document.getElementById('graficoDataToday').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
+        document.getElementById('graficoDataNextDays').style.backgroundColor = ''
+    }
+    function changeNextday(){
+        setdaPassare(graficoDataNextDays)
+        document.getElementById('graficoDataNextDays').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
+        document.getElementById('graficoDataToday').style.backgroundColor = ''
+    }
 
     return (
         <>
@@ -69,17 +98,18 @@ const DatiTempo = (props) => {
                     <div className="d-flex justify-content-between">
                     </div>
                     <div id="topDati" className="d-flex flex-column align-items-center">
-
-                        <div className="d-flex flex-column gap-2 align-items-center">
-                            <h1><span className="display-1 fw-bold">{(props.dati?.main?.temp - gradiKelvin).toFixed()}</span> °C</h1>
+                    <div className="d-flex flex-column gap-2 align-items-center">
+                            <div className="d-flex gap-1 align-items-center">
+                                <h1 className="display-1">{(props.dati?.main?.temp - gradiKelvin).toFixed()}</h1>
+                                <p className="display-6">°C</p>
+                            </div>
                             <div className='d-flex gap-2 align-item-center'>
                                 <i className="bi bi-cloud-fill"></i>
                                 <p>{props.dati?.clouds?.all}</p>
                             </div>
-                        </div>
-
                     </div>
-                    <div id="bottomDati" className="d-flex flex-column gap-2">
+                    </div>
+                    <div id="bottomDati" className="mx-auto col-12 col-md-6 d-flex flex-column gap-2">
                         <div className="d-flex gap-2 align-items-center">
                             <div id="leftDati" className="col d-flex flex-column justify-content-center gap-2">
                                 <div className='d-flex flex-column justify-content-center align-items-center'>
@@ -90,12 +120,11 @@ const DatiTempo = (props) => {
                                 </div>
                                 <div className='d-flex flex-column justify-content-center'>
                                     <div className="d-flex gap-2 align-items-center">
-                                        <p></p>
-                                        <p>{parseInt((props.dati?.sys?.sunrise / (1000 * 60 * 60)) % 24)} : {parseInt((props.dati?.sys?.sunrise / (1000 * 60)) % 60)}</p>
+                                        <p>{orarioSunrise}</p>
                                         <i class="bi bi-sunrise-fill sunrise"></i>
                                     </div>
                                     <div className="d-flex gap-2 align-items-center">
-                                        <p>{parseInt((props.dati?.sys?.sunset / (1000 * 60 * 60)) % 24)} : {parseInt((props.dati?.sys?.sunset / (1000 * 60)) % 60)}</p>
+                                        <p>{orarioSunset}</p>
                                         <i className="bi bi-sunset-fill sunset"></i>
                                     </div>
                                 </div>
@@ -146,10 +175,10 @@ const DatiTempo = (props) => {
                                 )}
                             </div>
                             <div id="moreDays" className="col-12">
-                                <div className="mt-3" id="collapseExample">
+                                <div className="my-2" id="collapseExample">
                                     {nextDaysDate.map((el, index) => 
                                         <div className="d-flex justify-content-between align-items-center" key={index}>
-                                            <p className="col-3 fw-bold">{giorniSettimana[(day += 1)]}</p>
+                                            <p className="col-3 fw-bold">{giorniSettimana[(day < 6 ? day += 1 : day = 0)]}</p>
                                             <div className="d-flex gap-2">
                                                 <i class="bi bi-moisture"></i>
                                                 <p>{el.main.humidity}%</p>
@@ -160,13 +189,19 @@ const DatiTempo = (props) => {
                                     )}
                                 </div>
                             </div>
-                            <div id="grafico">
-                                <LineChart className="mx-auto" width={1100} height={300} data={graficoData}>
-                                    <Line type="monotone" dataKey="uv" stroke="rgba(22, 90, 90)" />
-                                    <CartesianGrid stroke="rgba(22, 90, 90, 0.6)" />
-                                    <XAxis dataKey="name" />
-                                    <YAxis />
-                                </LineChart>
+                            <div id="bigContainer" className="d-flex flex-column gap-2">
+                                <div className="d-flex gap-2 mx-auto">
+                                    <a id="graficoDataToday" onClick={() => changeToday()}>Today</a>
+                                    <a id="graficoDataNextDays" onClick={() => changeNextday()}>Next days</a>
+                                </div>
+                                <div id="containerGrafico">
+                                    <LineChart className="mx-auto" width={1100} height={300} data={daPassare}>
+                                        <Line type="monotone" dataKey="uv" stroke="rgba(22, 90, 90)" />
+                                        <CartesianGrid stroke="rgba(22, 90, 90, 0.6)" />
+                                        <XAxis dataKey="name" />
+                                        <YAxis />
+                                    </LineChart>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,22 +214,6 @@ const DatiTempo = (props) => {
 export default DatiTempo
 
 
-/* let icon
-    let descriptiondata
-
-    const icona = () => {
-        props.dati?.weather.forEach((el) => {
-            console.log(el.icon); 
-            icon = el.icon
-        })
-    }; icona()
-
-    const description = () => {
-        props?.dati?.weather?.forEach((element) => {
-        console.log(element.description);
-        descriptiondata = element.description
-    })}; description() */
-
 /* const sfondo = () => {
     if((props.dati?.main?.temp - gradiKelvin).toFixed() > 3){
         let body = document.getElementsByName('body')
@@ -202,36 +221,3 @@ export default DatiTempo
     }
 }
 sfondo() */
-
-/* let msDurata = props.dati?.sys?.sunrise
-console.log(msDurata = parseInt((msDurata/(1000*60*60))%24));
-console.log(msDurata = parseInt((msDurata/(1000*60))%60));
-
-function msToTime(msDurata) {
-    var millisecondi = parseInt((msDurata%1000)/100)
-        , secondi = parseInt((msDurata/1000)%60)
-        , minuti = parseInt((msDurata/(1000*60))%60)
-        , ore = parseInt((msDurata/(1000*60*60))%24);
- 
-    ore = (ore < 10) ? "0" + ore : ore;
-    minuti = (minuti < 10) ? "0" + minuti : minuti;
-    secondi = (secondi < 10) ? "0" + secondi : secondi;
- 
-    console.log(ore + ":" + minuti + ":" + secondi + "." + millisecondi);
-} 
-
-    <i id="arrowUp" className="bi bi-arrow-up"></i>
-    function ruotaArrow(){
-        let arrowDown = document.getElementById('arrowDown')
-        let stato = arrowDown.getAttribute('stato').valueOf
-
-        if(stato === true){
-            arrowDown.style.rotate = '180deg'
-            stato = false
-        } else if (stato === false) {
-            arrowDown.style.rotate = '-180deg'
-            stato = true
-        }
-
-    }
-*/

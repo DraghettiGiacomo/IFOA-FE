@@ -61,19 +61,26 @@ body{
     height: 40%;
 }
 
-#today, #grafico{
+#graficoDataNextDays,
+#graficoDataToday{
+    padding: 3px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#today, #containerGrafico{
     overflow-x: scroll;
 }
 #today::-webkit-scrollbar,
-#grafico::-webkit-scrollbar {
-    height: 3px;
+#containerGrafico::-webkit-scrollbar {
+    height: 5px;
 }
 #today::-webkit-scrollbar-track,
-#grafico::-webkit-scrollbar-track {
+#containerGrafico::-webkit-scrollbar-track {
     border-radius: 9px;
 }
 #today::-webkit-scrollbar-thumb,
-#grafico::-webkit-scrollbar-thumb {
+#containerGrafico::-webkit-scrollbar-thumb {
     background-color: #0066ce;
     border-radius: 9px;
 }
@@ -87,10 +94,9 @@ body{
 
 #bottomDati #righttDati,
 #nextDays,
-#grafico,
+#bigContainer,
 #bottomDati #leftDati>div{
     padding: 18px;
-    /* border: 1px solid black; */
     border-radius: 9px;
     background-color: rgba(0, 139, 139, 0.22);
     width: 100%;

@@ -175,16 +175,16 @@ const DatiTempo = (props) => {
                                 )}
                             </div>
                             <div id="moreDays" className="col-12">
-                                <div className="my-2" id="collapseExample">
+                                <div className="my-2 container" id="collapseExample">
                                     {nextDaysDate.map((el, index) => 
-                                        <div className="d-flex justify-content-between align-items-center" key={index}>
-                                            <p className="col-3 fw-bold">{giorniSettimana[(day < 6 ? day += 1 : day = 0)]}</p>
-                                            <div className="d-flex gap-2">
+                                        <div className="row d-flex justify-content-between align-items-center" key={index}>
+                                            <p className="col-4 fw-bold">{giorniSettimana[(day < 6 ? day += 1 : day = 0)]}</p>
+                                            <div className="col-3 d-flex gap-2">
                                                 <i class="bi bi-moisture"></i>
                                                 <p>{el.main.humidity}%</p>
                                             </div>
-                                            <img src={`https://openweathermap.org/img/wn/${el.weather[0].icon}.png`} alt="" />
-                                            <p>{(el?.main?.temp_max - gradiKelvin).toFixed()}-{(el?.main?.temp_min - gradiKelvin).toFixed()} °C</p>
+                                            <img className="col-2" src={`https://openweathermap.org/img/wn/${el.weather[0].icon}.png`} alt="" />
+                                            <p className="col-3 text-end">{(el?.main?.temp_max - gradiKelvin).toFixed()}-{(el?.main?.temp_min - gradiKelvin).toFixed()} °C</p>
                                         </div>
                                     )}
                                 </div>

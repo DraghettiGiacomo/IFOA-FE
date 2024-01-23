@@ -61,8 +61,7 @@ body{
     height: 40%;
 }
 
-#graficoDataNextDays,
-#graficoDataToday{
+.graficoButton{
     padding: 3px 9px;
     border-radius: 6px;
     cursor: pointer;
@@ -71,6 +70,7 @@ body{
 #today, #containerGrafico{
     overflow-x: scroll;
 }
+body::-webkit-scrollbar,
 #today::-webkit-scrollbar,
 #containerGrafico::-webkit-scrollbar {
     height: 5px;
@@ -126,6 +126,15 @@ body{
 }
 .rightSomeDati h6 span{
     font-weight: 400;
+}
+
+.opacita{
+    opacity: 60%;
+}
+
+.disable{
+    opacity: 60%;
+    cursor: no-drop;
 }
 
 /* DATI */

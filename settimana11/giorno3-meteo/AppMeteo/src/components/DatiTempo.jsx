@@ -41,12 +41,18 @@ const DatiTempo = (props) => {
     let month = data.getMonth()
 
     // recupero i dati della fetch che riguardano il giorno corrente, per poi fare il map dell'array
+    let nientePrevisioni
     let oggi = []
     function todayMeteo() {
-        props?.datiNextDays.list?.forEach((el) => {
-            el.dt_txt.includes(currentDate.slice(0,10)) &&
-                oggi.push(el)
-        })
+        if(oggi = []){
+            nientePrevisioni = 'Non ci sono previsioni di oggi per ora'
+        } else {
+            nientePrevisioni = ''
+            props?.datiNextDays.list?.forEach((el) => {
+                el.dt_txt.includes(currentDate.slice(0,10)) &&
+                    oggi.push(el)
+            })
+        }
     } todayMeteo()
     
     // salvo in un array i dati della fetch che riguardano i prossimi giorni, per poi fare il map dell'array
@@ -67,7 +73,7 @@ const DatiTempo = (props) => {
     const graficoDataToday = []
     function datiGrafico(){
         nextDaysDate.forEach((el) => {
-            graficoDataNextDays.push({name: `${partenza < 23 ? partenza += 3 : partenza = 0}:00`, uv: (el.main.temp - gradiKelvin), pv: (el.main.temp_max - gradiKelvin), amt: (el.main.min - gradiKelvin)})
+            graficoDataNextDays.push({name: (el.dt_txt.slice(0,10)), uv: (el.main.temp - gradiKelvin), pv: (el.main.temp_max - gradiKelvin), amt: (el.main.min - gradiKelvin)})
         })
         oggi.forEach((el) => {
             graficoDataToday.push({name: `${partenza < 23 ? partenza += 3 : partenza = 0}:00`, uv: (el.main.temp_max - gradiKelvin), pv: (el.main.temp - gradiKelvin), amt: (el.main.min - gradiKelvin)})
@@ -109,8 +115,8 @@ const DatiTempo = (props) => {
                             </div>
                     </div>
                     </div>
-                    <div id="bottomDati" className="mx-auto col-12 col-md-6 d-flex flex-column gap-2">
-                        <div className="d-flex gap-2 align-items-center">
+                    <div id="bottomDati" className="mx-auto col-12 d-flex flex-wrap gap-2">
+                        <div className="d-flex gap-2 align-items-center col-12 col-md-6">
                             <div id="leftDati" className="col d-flex flex-column justify-content-center gap-2">
                                 <div className='d-flex flex-column justify-content-center align-items-center'>
                                     <div className=' d-flex justify-content-between w-100'>
@@ -122,10 +128,12 @@ const DatiTempo = (props) => {
                                     <div className="d-flex gap-2 align-items-center">
                                         <p>{orarioSunrise}</p>
                                         <i class="bi bi-sunrise-fill sunrise"></i>
+                                        <small className="opacita">- Sunrise</small>
                                     </div>
                                     <div className="d-flex gap-2 align-items-center">
                                         <p>{orarioSunset}</p>
                                         <i className="bi bi-sunset-fill sunset"></i>
+                                        <small className="opacita">- Sunset</small>
                                     </div>
                                 </div>
                             </div>
@@ -152,8 +160,9 @@ const DatiTempo = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div id="nextDays" className="col-12 text-dark d-flex flex-column gap-2 align-items-center">
-                            <div id="today" className="d-flex gap-2 col-12">
+                        <div id="nextDays" className="col-12 col-md-6 text-dark d-flex flex-wrap gap-2 justify-content-center align-items-center">
+                            <h5 className="opacita col-12 text-center" id="nientePrevisioni">{nientePrevisioni}</h5>
+                            <div id="today" className="d-flex gap-2 col-12 col-md-5">
                                 {oggi.map((el, index) => 
                                     <div id="ore" className="col-7 d-flex flex-column" key={index}>
                                         <div>
@@ -174,7 +183,7 @@ const DatiTempo = (props) => {
                                     </div>
                                 )}
                             </div>
-                            <div id="moreDays" className="col-12">
+                            <div id="moreDays" className="col-12 col-md-5">
                                 <div className="my-2 container" id="collapseExample">
                                     {nextDaysDate.map((el, index) => 
                                         <div className="row d-flex justify-content-between align-items-center" key={index}>
@@ -189,10 +198,11 @@ const DatiTempo = (props) => {
                                     )}
                                 </div>
                             </div>
-                            <div id="bigContainer" className="d-flex flex-column gap-2">
+                        </div>
+                        <div id="bigContainer" className="d-flex flex-column gap-2 col-12">
                                 <div className="d-flex gap-2 mx-auto">
-                                    <a id="graficoDataToday" onClick={() => changeToday()}>Today</a>
-                                    <a id="graficoDataNextDays" onClick={() => changeNextday()}>Next days</a>
+                                    <a className="graficoButton" id="graficoDataToday" onClick={() => changeToday()}>Today</a>
+                                    <a className="graficoButton" id="graficoDataNextDays" onClick={() => changeNextday()}>Next days</a>
                                 </div>
                                 <div id="containerGrafico">
                                     <LineChart className="mx-auto" width={1100} height={300} data={daPassare}>
@@ -202,7 +212,6 @@ const DatiTempo = (props) => {
                                         <YAxis />
                                     </LineChart>
                                 </div>
-                            </div>
                         </div>
                     </div>
 

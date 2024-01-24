@@ -85,36 +85,51 @@ body::-webkit-scrollbar,
     border-radius: 9px;
 }
 
-#nextDays #today #ore,
+.ore{
+    height: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+    #today{
+        overflow-y: scroll;
+        height: fit-content;
+    }
+    #today::-webkit-scrollbar{
+        height: 0px;
+    }
+}
+
+.ore,
 #collapseExample {
     background-color: rgba(0, 139, 139, 0.22);
     border-radius: 6px;
     padding: 12px;
 }
 
-#bottomDati #righttDati,
+#righttDati,
 #nextDays,
 #bigContainer,
-#bottomDati #leftDati>div{
+#leftDati>div{
     padding: 18px;
     border-radius: 9px;
     background-color: rgba(0, 139, 139, 0.22);
     width: 100%;
 }
 
-#bottomDati #righttDati{
+#righttDati{
     height: 100%;
 }
 
-#bottomDati #leftDati{
+#leftDati{
     height: 100%;
 }
 
-#bottomDati #leftDati>div{
+#leftDati>div{
     height: 50%;
 }
 
-.sunset, .sunrise{
+.sunset, 
+.sunrise{
     font-size: 22px;
 }
 
@@ -135,6 +150,20 @@ body::-webkit-scrollbar,
 .disable{
     opacity: 60%;
     cursor: no-drop;
+}
+
+.imageBackGroundCloud{
+    background-image: url(./assets/IMG_20231227_103722-removebg-prasfeview-removebg-preview.png);
+}
+.imageBackGroundSun{
+    background-image: url(./assets/pxArt.png);
+}
+.imageBackGroundSun, 
+.imageBackGroundCloud{
+    border-radius: 9px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
 }
 
 /* DATI */

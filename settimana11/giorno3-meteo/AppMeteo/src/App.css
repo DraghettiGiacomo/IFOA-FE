@@ -12,6 +12,10 @@ a{
     text-decoration: none;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgba(0, 139, 139, 0.22);
     padding: 11px 4px;
@@ -21,6 +25,10 @@ body{
 
 
 /* SEARCH */
+#containerSearchBar{
+    height: 44px;
+}
+
 #inputCity{
     border: 1px solid rgb(0, 139, 139);
     max-width: fit-content;
@@ -67,6 +75,9 @@ body{
     cursor: pointer;
 }
 
+#today{
+    justify-content: start;
+}
 #today, #containerGrafico{
     overflow-x: scroll;
 }
@@ -93,6 +104,8 @@ body::-webkit-scrollbar,
     #today{
         overflow-y: scroll;
         height: fit-content;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     #today::-webkit-scrollbar{
         height: 0px;
@@ -164,6 +177,40 @@ body::-webkit-scrollbar,
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0%;
+}
+
+#contenitorecitypreferite{
+    background-image: url(./assets/IMG_20231227_103722-removebg-prasfeview-removebg-preview.png);
+    /* background-image: url(./assets/pxArt.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 75vh;
+}
+
+.iconSearch{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cardCity{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 250px;
+    position: relative;
+    /* background-color: rgba(0, 139, 139, 0.44); */
+}
+.cardCity >div {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+}
+.cardCity >i {
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
 }
 
 /* DATI */

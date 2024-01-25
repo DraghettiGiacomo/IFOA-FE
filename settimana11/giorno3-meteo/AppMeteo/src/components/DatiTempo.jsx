@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createElement } from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { Button } from 'react-bootstrap'
 
 const DatiTempo = (props) => { 
 
@@ -71,30 +72,13 @@ const DatiTempo = (props) => {
             graficoDataToday.push({name: `${partenza < 23 ? partenza += 3 : partenza = 0}:00`, uv: (el.main.temp_max - gradiKelvin), pv: (el.main.temp - gradiKelvin), amt: (el.main.min - gradiKelvin)})
         })
     } datiGrafico()
-
-    // cambio il grafico a seconda di quale link premo 
-    const [daPassare, setdaPassare] = useState(graficoDataNextDays) 
-
-    function changeToday(){
-        setdaPassare(graficoDataToday)
-        document.getElementById('graficoDataToday').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
-        document.getElementById('graficoDataNextDays').style.backgroundColor = ''
-    }
-    function changeNextday(){
-        setdaPassare(graficoDataNextDays)
-        document.getElementById('graficoDataNextDays').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
-        document.getElementById('graficoDataToday').style.backgroundColor = ''
-    }
-
-    useEffect(()=>{
-        datiGrafico()
-    }, [])
+    let daPassare = graficoDataNextDays
 
     return (
         <>
             {props.dati != null &&
                 <div id="DatiContainer" className="container">
-                    <div className="text-center mt-3 my-md-4">
+                    <div className="d-flex justify-content-center align-items-center gap-2 text-center mt-3 my-md-4">
                         <h2>{props.dati.name} {props.dati?.sys?.country}</h2>
                     </div>
                     <div id="bottomDati" className="mx-auto col-12 d-flex flex-wrap gap-2">
@@ -105,7 +89,7 @@ const DatiTempo = (props) => {
                                     <p className="display-6">°C</p>
                                 </div>
                                 <div className='d-flex gap-2 align-item-center'>
-                                    <i className="bi bi-cloud-fill"></i>
+                                    <i className="bi bi-cloud"></i>
                                     <p>{props.dati?.clouds?.all}</p>
                                 </div>
                             </div>
@@ -120,7 +104,7 @@ const DatiTempo = (props) => {
                                     <div className='d-flex flex-column justify-content-center'>
                                         <div className="d-flex gap-2 align-items-center">
                                             <p>{orarioSunrise}</p>
-                                            <i class="bi bi-sunrise-fill sunrise"></i>
+                                            <i className="bi bi-sunrise-fill sunrise"></i>
                                             <small className="opacita">- Sunrise</small>
                                         </div>
                                         <div className="d-flex gap-2 align-items-center">
@@ -158,8 +142,8 @@ const DatiTempo = (props) => {
                             <h5 className="opacita col-12 text-center" id="nientePrevisioni">{nientePrevisioni}</h5>
                             <div className="col-12 col-md-6">
                                 <h5 className="opacita col-12 text-center">Today</h5>
-                                <div id="today" className="d-flex justify-content-center flex-md-wrap gap-2 p-2">
-                                    {oggi.map((el, index) => 
+                                <div id="today" className="d-flex flex-md-wrap gap-2 p-2">
+                                    {oggi.length > 0 ? oggi.map((el, index) => 
                                         <div className="ore col-7 col-md-5 d-flex flex-column" key={index}>
                                             <div>
                                                 <div className="d-flex justify-content-between align-items-center">
@@ -172,12 +156,12 @@ const DatiTempo = (props) => {
                                                     <p>{(el?.main?.temp_max - gradiKelvin).toFixed()}° - {(el?.main?.temp_min - gradiKelvin).toFixed()}°C</p>
                                                 </div>
                                                 <div className="d-flex gap-2">
-                                                    <i class="bi bi-moisture"></i>
+                                                    <i className="bi bi-moisture"></i>
                                                     <p>{el.main.humidity}%</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    )}
+                                    ) : <p className="text-center">Non ci sono previsioni per il meteo di oggi</p>}
                                 </div>
                             </div>
                             <div id="moreDays" className="col-12 col-md-5">
@@ -187,7 +171,7 @@ const DatiTempo = (props) => {
                                         <div className="row d-flex justify-content-between align-items-center" key={index}>
                                             <p className="col-4 fw-bold">{giorniSettimana[(day < 6 ? day += 1 : day = 0)]}</p>
                                             <div className="col-3 d-flex gap-2">
-                                                <i class="bi bi-moisture"></i>
+                                                <i className="bi bi-moisture"></i>
                                                 <p>{el.main.humidity}%</p>
                                             </div>
                                             <img className="col-2" src={`https://openweathermap.org/img/wn/${el.weather[0].icon}.png`} alt="" />
@@ -198,10 +182,7 @@ const DatiTempo = (props) => {
                             </div>
                         </div>
                         <div id="bigContainer" className="d-flex flex-column gap-2 col-12">
-                                <div className="d-flex gap-2 mx-auto">
-                                    <a className="graficoButton" id="graficoDataToday" onClick={() => changeToday()}>Today</a>
-                                    <a className="graficoButton" id="graficoDataNextDays" onClick={() => changeNextday()}>Next days</a>
-                                </div>
+                                <a className=" mx-auto" /* id="graficoDataNextDays"  onClick={() => changeNextday()} */>Next days</a>
                                 <div id="containerGrafico">
                                     <LineChart className="mx-auto" width={1100} height={300} data={daPassare}>
                                         <Line type="monotone" dataKey="uv" stroke="rgba(22, 90, 90)" />
@@ -219,3 +200,25 @@ const DatiTempo = (props) => {
 }
 
 export default DatiTempo
+
+    // cambio il grafico a seconda di quale link premo 
+
+    /* <a className="graficoButton" id="graficoDataNextDays"  onClick={() => changeNextday()} >Next days</a>
+        <a className="graficoButton" id="graficoDataToday"  onClick={() => changeToday()} >Next days</a>
+
+    /* const [daPassare, setdaPassare] = useState([graficoDataNextDays]) 
+
+    function changeToday(){
+        setdaPassare(graficoDataToday)
+        document.getElementById('graficoDataToday').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
+        document.getElementById('graficoDataNextDays').style.backgroundColor = ''
+    }
+    function changeNextday(){
+        setdaPassare(graficoDataNextDays)
+        document.getElementById('graficoDataNextDays').style.backgroundColor = 'rgba(0, 139, 139, 0.4)'
+        document.getElementById('graficoDataToday').style.backgroundColor = ''
+    }
+
+    useEffect(()=>{
+        datiGrafico()
+    }, []) */
